@@ -1,0 +1,4094 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="JavaSE 基础笔记, Erron">
+    <meta name="description" content="嗯，先这样吧。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>JavaSE 基础笔记 | Erron</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Erron" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Erron</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle-o" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/music">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Music</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Erron</div>
+        <div class="logo-desc">
+            
+            嗯，先这样吧。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle-o"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/music " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Music</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">JavaSE 基础笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JavaSE/">
+                                <span class="chip bg-color">JavaSE</span>
+                            </a>
+                        
+                            <a href="/tags/College/">
+                                <span class="chip bg-color">College</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Advance/" class="post-category">
+                                Advance
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-20
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Day01：Object-类、常用-API"><a href="#Day01：Object-类、常用-API" class="headerlink" title="Day01：Object 类、常用 API"></a>Day01：Object 类、常用 API</h1><hr>
+<h2 id="✅-一-Object-类"><a href="#✅-一-Object-类" class="headerlink" title="✅ [一] Object 类"></a>✅ [一] Object 类</h2><h3 id="1-Object-类概述"><a href="#1-Object-类概述" class="headerlink" title="1. Object 类概述"></a>1. Object 类概述</h3><ul>
+<li><strong><em><code>java.lang.Object</code></em></strong> 类是 Java 语言中<strong>所有类的父类</strong>，所有类都可以实现它的方法。</li>
+</ul>
+<h3 id="2-toString-方法"><a href="#2-toString-方法" class="headerlink" title="2. toString 方法"></a>2. toString 方法</h3><ul>
+<li><strong><em><code>public String toString()</code></em></strong> 方法的作用是返回该对象的<em>字符串</em>表示，返回值的内容是 <code>"对象的类型@对象的内存地址值"</code>。</li>
+<li>直接打印一个对象 <code>p</code>，和打印 <code>p.toString()</code>，效果是相同的。</li>
+<li><code>toString</code> 可以根据需要进行重写，而且最好养成每个类都重写的习惯。</li>
+<li>在 IDEA 中，通过 <strong><em><code>Alt+Insert</code></em></strong> 快捷键可以快速重写 <code>toString</code> 方法。</li>
+</ul>
+<h3 id="3-equals-方法"><a href="#3-equals-方法" class="headerlink" title="3. equals 方法"></a>3. equals 方法</h3><ul>
+<li><strong><em><code>public boolean equals(Object obj)</code></em></strong> 方法可以判断某个对象是否与调用者相等。</li>
+<li>如果没有重写，那么 <code>equals</code> 方法默认比较两个对象的地址值，即同一个对象才会返回 <code>true</code>。</li>
+<li><code>equals</code> 方法可以根据需要进行重写，但在重写时，注意首先将参数中的 <code>obj</code> 向下转型。</li>
+<li>在 IDEA 中， 通过 <code>Alt+Insert</code> 快捷键可以快速重写 <code>equals</code> 方法。</li>
+<li><code>java.util.Objtcts</code> 类是一个工具类，其中有静态的 <code>equals</code> 方法，源码如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public static boolean equals(Object a, Object b){
+	return (a == b) || (a != null &amp;&amp; a.equals(b));
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>这样设计静态方法的好处是，能够避免产生空指针异常。</p>
+</blockquote>
+<hr>
+<h2 id="✅-二-日期与时间类"><a href="#✅-二-日期与时间类" class="headerlink" title="✅ [二] 日期与时间类"></a>✅ [二] 日期与时间类</h2><h3 id="1-Date-类"><a href="#1-Date-类" class="headerlink" title="1. Date 类"></a>1. Date 类</h3><ul>
+<li><strong><em><code>java.util.Date</code></em></strong> 类表示特定的时间点，精确到<strong>毫秒</strong>。</li>
+<li>时间点是相对于时间原点（<em>中时区的 1970 年 1 月 1 日</em>）而言的。</li>
+<li><code>Date</code> 类有多个构造函数：<ul>
+<li><code>public Date()</code>：分配 <code>Date</code> 对象并初始化此对象，它的内容为当前对象被创建的时间。</li>
+<li><code>public Date(long date)</code>：分配 <code>Date</code> 对象并初始化该对象，它的内容为自时间原点开始走 <code>date</code> 毫秒之后的时间。</li>
+</ul>
+</li>
+<li><code>Date</code> 类有重写后的 <code>toString</code> 方法，可以直接打印出年月日等。</li>
+<li><code>long getTime()</code> 方法可以返回当前对象表示的时间距事件原点相隔多少毫秒。</li>
+</ul>
+<h3 id="2-DateFormat-类"><a href="#2-DateFormat-类" class="headerlink" title="2. DateFormat 类"></a>2. DateFormat 类</h3><ul>
+<li><p><strong><em><code>java.text.DateFormat</code></em></strong> 类是一个<em>抽象类</em>，作用是完成日期时间的格式化，它既可以让 <code>Date</code> 对象转换为 <code>String</code> ，也可以将 <code>String</code> 对象转换为 <code>Date</code>。</p>
+</li>
+<li><p>我们经常用的非抽象子类是 <code>java.text.SimpleDateFormat</code>，它的构造方法为 <code>public SimpleDateFormat(String pattern)</code>，即用特定的<em>模式字符串</em>构造一个对象。</p>
+</li>
+<li><p>模式字符串的格式对应：<code>y</code> <code>M</code> <code>d</code> <code>H</code> <code>m</code> <code>s</code> 分别代表年、月、日、时、分、秒。</p>
+</li>
+<li><p><code>public String format(Date date)</code> 方法：将 <code>Date</code> 对象格式化为字符串。</p>
+</li>
+<li><p><code>public Date parse(String source)</code> 方法：将字符串解析为 <code>Date</code> 对象。</p>
+</li>
+<li><p>下面是应用 <code>Date</code> 类的实际代码：</p>
+</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">import java.text.DateFormat;
+import java.text.ParseException
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class TestClass{
+	public static void main(String[] args) throws ParseException{
+		Date date = new Date();
+		DateFormat df = new SimpleDateFormat("yyyy年MM月dd日");
+		String str = df.format(date);
+		System.out.println(str);
+		System.out.println(df.parse(str));
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><code>throws ParseException</code> 是为了在产生<em>异常</em>的时候将其抛出。关于<em>异常</em>的知识将在后面提到。</p>
+</blockquote>
+<h3 id="3-Calendar-类"><a href="#3-Calendar-类" class="headerlink" title="3. Calendar 类"></a>3. Calendar 类</h3><ul>
+<li><strong><em><code>java.util.Calendar</code></em></strong> 类是日历类，它替换掉了许多 <code>Date</code> 中的方法。</li>
+<li><code>Calendar</code> 类为<em>抽象类</em>，因此它在创建对象时，通常使用静态方法 <code>public static Calendar getInstance()</code> 创建。</li>
+<li><code>Calendar</code> 类的常用方法有：<ul>
+<li><code>public int get(int field)</code>：返回给定日历字段的值。</li>
+<li><code>public void set(int field, int value)</code>：将给定的日历字段设置为目标值。</li>
+<li><code>public abstract void add(int field, int amount)</code>：根据日历的规则，为给定的日历字段添加指定的时间量。</li>
+<li><code>public Date getTime()</code>：返回一个与当前对象时间值的 <code>Date</code> 对象。</li>
+</ul>
+</li>
+<li><code>Calendar</code> 的常用成员常量有：<ul>
+<li><code>YEAR</code>：年</li>
+<li><code>MONTH</code>：月（从 0 开始）</li>
+<li><code>DAY_OF_MONTH</code>：一个月的第几天</li>
+<li><code>HOUR</code>：时（12 小时制）</li>
+<li><code>HOUR_OF_DAY</code>：时（24 小时制）</li>
+<li><code>MINUTE</code>：分</li>
+<li><code>SECOND</code>：秒</li>
+<li><code>DAY_OF_WEEK</code>：一周的第几天（周日为第 1 天）</li>
+</ul>
+</li>
+<li><code>get </code> 与 <code>set</code> 方法可以获取或者设置指定字段的值，<code>add</code> 方法可以进行加减操作，<code>getTime</code> 方法可以获取日期对象，如：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">Calendar cal = Calendar.getInstance();
+int year = cal.get(Calendar.YEAR);
+cal.set(Calendar.YEAR, 2048);
+cal.add(Calendar.YEAR, 996);
+Date date = cal.getTime();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-三-System-类"><a href="#✅-三-System-类" class="headerlink" title="✅ [三] System 类"></a>✅ [三] System 类</h2><h3 id="1-System-类概述"><a href="#1-System-类概述" class="headerlink" title="1. System 类概述"></a>1. System 类概述</h3><ul>
+<li><strong><em><code>java.lang.System</code></em></strong> 类中提供了大量的<strong>静态</strong>方法，可以获取与系统相关的信息或系统级操作。</li>
+<li><code>System</code> 类中常用的方法有：<ul>
+<li><code>public static long currentTimeMillis</code>：返回以毫秒为单位的当前时间（相对于时间原点）。</li>
+<li><code>public static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length)</code>：将数组中指定的数据拷贝到另一个数组中。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-arraycopy-方法"><a href="#2-arraycopy-方法" class="headerlink" title="2. arraycopy 方法"></a>2. arraycopy 方法</h3><ul>
+<li><code>arraycopy</code> 方法的参数中，<code>src</code> 与 <code>dest</code> 分别表示原数组与目标数组，<code>srcPos</code> 和 <code>destPos</code> 分别表示这两个数组的索引起始位置，<code>length</code> 表示复制元素的个数。</li>
+<li>下面是应用 <code>arraycopy</code> 的实际代码：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">import java.util.Arrays;
+
+public class TestClass{
+	public static void main(String[] args){
+		int[] src = new int[]{1, 2, 3, 4, 5};
+		int[] dest = new int[]{6, 7, 8, 9, 10};
+		System.arraycopy(src, 0, dest, 1, 3);
+		// 此时，src 依然是 [1,2,3,4,5]，而 dest 则变为了[6,1,2,3,10]
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-四-StringBuider-类"><a href="#✅-四-StringBuider-类" class="headerlink" title="✅ [四] StringBuider 类"></a>✅ [四] StringBuider 类</h2><h3 id="1-StringBuider-类概述"><a href="#1-StringBuider-类概述" class="headerlink" title="1. StringBuider 类概述"></a>1. StringBuider 类概述</h3><ul>
+<li><strong><em><code>java.lang.StringBuider</code></em></strong> 类被用来解决字符串不可变导致的空间浪费问题。</li>
+<li><code>StringBuider</code> 是<strong>字符串的缓冲区</strong>，它的内部拥有一个存放字符串内容的可变数组，在进行字符串拼接时，它能够直接在数组中加入新内容。</li>
+<li><code>StringBuider</code> 中的数组默认容量为 <em>16</em>，超过会自动扩容。</li>
+</ul>
+<h3 id="2-常用方法"><a href="#2-常用方法" class="headerlink" title="2. 常用方法"></a>2. 常用方法</h3><ul>
+<li><code>StringBuider</code> 的构造方法有两种：<ul>
+<li><code>public StringBuider()</code>：构造一个空的容器。</li>
+<li><code>public StringBuider(String str)</code>：构造一个容器，初始化为目标字符串。</li>
+</ul>
+</li>
+<li><code>StringBuider</code> 类的常用成员方法有：<ul>
+<li><code>public StringBuider append(ElemType e)</code>：添加任意类型数据的字符串形式，并返回当前对象自身。</li>
+</ul>
+</li>
+<li><code>public String toString()</code>：将当前的 <code>StringBuider</code> 对象转换为 <code>String</code> 对象。</li>
+<li>关于 <strong><em><code>append</code></em></strong> 方法，实际应用代码如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		StringBuider bd1 = new StringBuider();
+		StringBuider bd2 = bd1.append("Hello");
+		System.out.println(bd1);	//Hello
+		System.out.println(bd2);	//Hello
+		bd1.append(", World!").append(10086).append(false);
+		System.out.println(bd1);	//Hello, World!10086false
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-五-包装类"><a href="#✅-五-包装类" class="headerlink" title="✅ [五] 包装类"></a>✅ [五] 包装类</h2><h3 id="1-包装类概述"><a href="#1-包装类概述" class="headerlink" title="1. 包装类概述"></a>1. 包装类概述</h3><ul>
+<li>Java 中的数据类型分为基本类型与引用类型。很多时候，我们希望基本类型的数据也能同对象一样完成更多功能，此时就可以使用它们对应的<strong>包装类</strong>：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">基本类型</th>
+<th align="center">对应的包装类(<code>java.lang.____</code>)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>byte</code></td>
+<td align="center"><code>Byte</code></td>
+</tr>
+<tr>
+<td align="center"><code>short</code></td>
+<td align="center"><code>Short</code></td>
+</tr>
+<tr>
+<td align="center"><code>int</code></td>
+<td align="center"><strong><em><code>Integer</code></em></strong></td>
+</tr>
+<tr>
+<td align="center"><code>long</code></td>
+<td align="center"><code>Long</code></td>
+</tr>
+<tr>
+<td align="center"><code>float</code></td>
+<td align="center"><code>Float</code></td>
+</tr>
+<tr>
+<td align="center"><code>double</code></td>
+<td align="center"><code>Double</code></td>
+</tr>
+<tr>
+<td align="center"><code>char</code></td>
+<td align="center"><strong><em><code>Character</code></em></strong></td>
+</tr>
+<tr>
+<td align="center"><code>boolean</code></td>
+<td align="center"><code>Boolean</code></td>
+</tr>
+</tbody></table>
+<h3 id="2-装箱与拆箱"><a href="#2-装箱与拆箱" class="headerlink" title="2. 装箱与拆箱"></a>2. 装箱与拆箱</h3><ul>
+<li>基本类型与对应的包装类对象之间可以相互转换，其中基本转包装称为<strong>装箱</strong>，包装转基本称为<strong>拆箱</strong>：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">Integer i = new Integer(10);	//使用构造方法装箱
+i = Integer.valueOf(10);		//使用 valueOf 方法装箱
+int num = i.intValue();			//使用 intValue 方法拆箱<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-自动装箱与自动拆箱"><a href="#3-自动装箱与自动拆箱" class="headerlink" title="3. 自动装箱与自动拆箱"></a>3. 自动装箱与自动拆箱</h3><ul>
+<li>从 Java5 开始，一些装箱与拆箱的动作可以自动完成，如：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">Integer i = 10;					//自动装箱
+i = i + 10;						//自动拆箱（加法）并装箱（赋值）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="4-基本类型与字符串之间的转换"><a href="#4-基本类型与字符串之间的转换" class="headerlink" title="4. 基本类型与字符串之间的转换"></a>4. 基本类型与字符串之间的转换</h3><ul>
+<li>基本类型转换为 <code>String</code> 类型总共有三种方式（另外两种方式是 <code>toString</code> 方法和 <code>valueOf</code> 方法），但只需要了解最简单的方式，即直接 <code>+ ""</code> ：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">String s = true + "";<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li><code>String</code> 类型转换为基本类型直接使用对应包装类的<strong>静态</strong>方法即可，如 <code>Integer.parseInt(String s)</code>。</li>
+<li>在将 <code>String</code> 类转换为基本数据类型时，如果对应的字符串参数无法对应一个目标类型的数据，则会抛出 <code>java.lang.NumberFormatException</code> <em>异常</em>。</li>
+</ul>
+<hr>
+<hr>
+<h1 id="Day02：Collection、泛型"><a href="#Day02：Collection、泛型" class="headerlink" title="Day02：Collection、泛型"></a>Day02：Collection、泛型</h1><hr>
+<h2 id="✅-一-Collection-集合"><a href="#✅-一-Collection-集合" class="headerlink" title="✅ [一] Collection 集合"></a>✅ [一] Collection 集合</h2><h3 id="1-Collection-接口概述"><a href="#1-Collection-接口概述" class="headerlink" title="1. Collection 接口概述"></a>1. Collection 接口概述</h3><ul>
+<li>在基础部分中，我们使用过集合 <code>ArrayList&lt;E&gt;</code>。实际上，<strong>集合</strong>是 java 中提供的一种容器，可以用来储存多个数据。</li>
+<li>相对于长度固定的数组，集合的<strong>长度可变</strong>。</li>
+<li>相对于只能存储相同类型基本数据的数组，集合不但可以存储对象，有的集合还能够<strong>存储不同类型的对象</strong>。</li>
+</ul>
+<h3 id="2-集合框架"><a href="#2-集合框架" class="headerlink" title="2. 集合框架"></a>2. 集合框架</h3><ul>
+<li>集合按照存储结构可以分为两类：<strong>单列集合</strong> <strong><em><code>java.util.Collection</code></em></strong> 和<strong>双列集合</strong> <code>java.util.Map</code>，它们都属于接口，本部分介绍 <code>Collection</code>。</li>
+<li><code>Collection</code> 是<strong>单列集合类的根接口</strong>，它有两个重要的子接口，分别是 <code>java.util.List</code> 和 <code>java.util.Set</code>，二者的特点如下：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">接口</th>
+<th align="center"><code>List</code></th>
+<th align="center"><code>Set</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">有序性</td>
+<td align="center">元素有序</td>
+<td align="center">元素无序</td>
+</tr>
+<tr>
+<td align="center">可重复性</td>
+<td align="center">元素可重复</td>
+<td align="center">元素不可重复</td>
+</tr>
+<tr>
+<td align="center">主要实现类</td>
+<td align="center"><code>ArrayList</code>, <code>LinkedList</code></td>
+<td align="center"><code>HashSet</code>, <code>TreeSet</code></td>
+</tr>
+</tbody></table>
+<h3 id="3-常用方法"><a href="#3-常用方法" class="headerlink" title="3. 常用方法"></a>3. 常用方法</h3><ul>
+<li><code>Collection</code> 是所有单列集合的父接口，因此它定义了一些方法可用于实现，常用方法如下：<ul>
+<li><code>public boolean add(E e)</code>：把给定对象添加到集合。</li>
+<li><code>public void clear()</code>：清空集合。</li>
+<li><code>public boolean contains(E e)</code>：在集合中删除给定对象。</li>
+<li><code>public boolean remove(E e)</code>：判断集合中是否包含给定对象。</li>
+<li><code>public boolean isEmpty()</code>：判断集合是否为空。</li>
+<li><code>public int size()</code>：返回集合中元素的数量。</li>
+<li><code>public Object[] toArray()</code>：把集合中的元素存储到数组中。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="✅-二-Iterator-迭代器"><a href="#✅-二-Iterator-迭代器" class="headerlink" title="✅ [二] Iterator 迭代器"></a>✅ [二] Iterator 迭代器</h2><h3 id="1-Itorator-接口概述"><a href="#1-Itorator-接口概述" class="headerlink" title="1. Itorator 接口概述"></a>1. Itorator 接口概述</h3><ul>
+<li><strong>迭代</strong>是 <code>Collection</code> 元素的通用获取方式。如果集合中有元素，就将其取出，直至把所有元素全部取出，这样的方式称为迭代。</li>
+<li><strong><em><code>java.util.Iterator</code></em></strong> 接口用来迭代访问（遍历）<code>Collection</code> 中的元素。</li>
+<li>获取迭代器的常用方法为 <code>public Iterator iterator()</code>。</li>
+</ul>
+<h3 id="2-常用方法-1"><a href="#2-常用方法-1" class="headerlink" title="2. 常用方法"></a>2. 常用方法</h3><ul>
+<li><code>Iterator</code> 接口的常用方法有两个：<ul>
+<li><code>public E next()</code>：返回迭代的下一个元素。</li>
+<li><code>public boolean hasNext()</code>：如果仍然有元素可以迭代，返回 <code>true</code>。</li>
+</ul>
+</li>
+<li>下面是 <code>Iterator</code> 接口简单应用的实际代码：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		Collection&lt;String&gt; c = new ArrayList&lt;String&gt;();
+		//利用多态特点创建的对象
+		c.add("java");
+		c.add("c++");
+		c.add("python");
+		
+		Iterator&lt;String&gt; it = coll.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next() + " ");
+			//java c++ python
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>如果集合中已经没有元素可以取出，那么使用迭代器的 <code>next</code> 方法时会抛出 <code>java.util.NoSuchElementException</code> <em>异常</em>。</p>
+</blockquote>
+<h3 id="3-迭代器的实现原理"><a href="#3-迭代器的实现原理" class="headerlink" title="3. 迭代器的实现原理"></a>3. 迭代器的实现原理</h3><ul>
+<li>在调用 <code>next</code> 方法之前，迭代器位于所有元素前面，并不指向任何元素。</li>
+<li>当迭代器索引指向最后一个元素时，<code>hasNext</code> 方法返回 <code>false</code>，表示到达集合末尾，终止遍历。</li>
+</ul>
+<h3 id="4-增强-for"><a href="#4-增强-for" class="headerlink" title="4. 增强 for"></a>4. 增强 for</h3><ul>
+<li>增强 <code>for</code> 循环（也称为 <code>foreach</code> 循环），是 JDK1.5 之后出现的一种循环方式，专门用于遍历数组与集合。</li>
+<li>它的内部原理是 <code>Iterator</code>，因此不能对集合中的元素进行增删操作。</li>
+<li>增强 <code>for</code> 的格式为：<code>for(ElemType e: 集合或数组对象){...}</code></li>
+</ul>
+<hr>
+<h2 id="✅-三-泛型"><a href="#✅-三-泛型" class="headerlink" title="✅ [三] 泛型"></a>✅ [三] 泛型</h2><h3 id="1-泛型概述"><a href="#1-泛型概述" class="headerlink" title="1. 泛型概述"></a>1. 泛型概述</h3><ul>
+<li>将对象存储进一般集合后，他们都会被提升为 <code>Object</code> 类，所以当我们从集合中取出对象时，需要使用<strong>强制类型转换</strong>，方能进行对象所属类型的具体操作。当类型转换失败时，会抛出 <code>ClassCastException</code> <em>异常</em>。为了避免这种异常，我们引入泛型。</li>
+<li><strong>泛型</strong>是指可以在类或方法中被预支使用的类型。</li>
+</ul>
+<h3 id="2-泛型的优势"><a href="#2-泛型的优势" class="headerlink" title="2. 泛型的优势"></a>2. 泛型的优势</h3><ul>
+<li>关于泛型的优势，下面使用代码加以说明：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		Collection&lt;String&gt; c = new ArrayList&lt;String&gt;;
+		c.add("Hello");
+		c.add("World");
+		//c.add(10);		//明确集合类型后，存放类型不一致的数据会在编译时报错
+		Iterator&lt;String&gt; it = c.iterator();
+		while(it.hasNext()){
+			String str = it.next();
+			//当使用 Iterator&lt;String&gt; 控制元素类型后，不需要再进行强制类型转换
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>不使用泛型能让多种类型的数据同时存放，但可能引发运行<em>异常</em>；使用泛型能够更安全地指定存放的数据的类型，也避免了类型转换的麻烦。</p>
+</blockquote>
+<h3 id="3-泛型的定义与使用"><a href="#3-泛型的定义与使用" class="headerlink" title="3. 泛型的定义与使用"></a>3. 泛型的定义与使用</h3><ul>
+<li>定义与使用<strong>含有泛型的类</strong>，格式如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">//定义
+修饰符 class 类名&lt;泛型变量&gt;{
+	...
+}
+
+//例如：
+class ArrayList&lt;E&gt;{
+	public boolean add(E e){...}
+	public E get(int index){...}
+	...
+}
+public class MyClass&lt;MC&gt;{
+	private MC mc;
+	public void setMC(MC mc){ this.mc = mc; }
+	public MC getMC(){ return mc; }
+}
+
+//如果要使用，只需要在创建时确定泛型的类型即可，如：
+public class TestClass{
+	public static void main(String[] args){
+		MyClass&lt;String&gt; mc = new MyClass&lt;String&gt;();
+		mc.setMC("Hello");
+		System.out.println(mc.getMC());
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>定义与使用<strong>含有泛型的方法</strong>，格式如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">//定义
+修饰符 &lt;泛型变量&gt; 返回值类型 方法名(形式参数){
+	...
+}
+
+//例如：
+public class MyClass{
+	public &lt;MC&gt; void show(MC mc){
+		System.out.println(mc.getClass());
+	}
+	public static &lt;MC&gt; MC getMC(MC mc){
+		return mc;
+	}
+}
+
+//如果要使用，只需在调用方法时，确定泛型的类型
+public class TestClass{
+	public static void main(String[] args){
+		MyClass mc = new MyClass();
+		mc.show("abc");				//String
+		mc.show(10);				//int
+		mc.show(MC.getMC("cba"));	//String
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>由于带有泛型的类只有创建对象时才确定泛型是什么类型，所以它们的与泛型相关的<strong>静态方法</strong>也必须定义为带有泛型的方法，而非静态成员方法则不必。</p>
+</blockquote>
+<ul>
+<li>定义与使用<strong>含有泛型的接口</strong>，格式如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">//定义
+修饰符 interface 接口名&lt;泛型变量&gt;{
+	...
+}
+
+//例如：
+public interface MyInterface&lt;MI&gt;{
+	public abstract void add(MI mi);
+	public abstract MI getMI();
+}
+
+//如果要使用，有以下两种方式：
+
+//1.在定义实现类时确定泛型的类型：
+public class TestClass1 implements MyInterface&lt;String&gt;{
+	@Override
+	public void add(String s){
+		...
+	}
+	@Override
+	public String getMI(){
+		...
+	}
+}
+
+//2.在创建对象时才确定泛型的类型：
+public class TestClass2&lt;MI&gt; implements MyInterface&lt;MI&gt;{
+	...
+}
+
+public class TestClass{
+	public static void main(String[] args){
+		TestClass2&lt;String&gt; tc2 = new TestClass2&lt;String&gt;();
+		tc2.add("abc");
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>如果在定义实现类时确定泛型类型，那么该类的类名后始终<strong>不加</strong>尖括号（无论是定义时的类名还是创建对象时的类名亦或是访问静态成员时的类名）。</p>
+<p>如果在创建对象时才确定泛型类型，那么该类的类名后始终<strong>加</strong>尖括号，并且定义时尖括号内的类是未知类，使用时尖括号内的类是已知类。</p>
+</blockquote>
+<h3 id="4-泛型通配符"><a href="#4-泛型通配符" class="headerlink" title="4. 泛型通配符"></a>4. 泛型通配符</h3><ul>
+<li>在使用泛型类或接口时，如果泛型类型不确定，可以通过<strong>通配符</strong> <strong><code>?</code></strong> 来表示，但在这种情况下，产生的对象只能使用 <code>Object</code> 类中的方法。</li>
+<li>简单运用的代码如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public static void main(String[] args){
+	Collection&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
+	getElement(list1);
+	Collection&lt;Integer&gt; list2 = new ArrayList&lt;Integer&gt;();
+	getElement(list2);
+}
+
+public static void getElement(Collection&lt;?&gt; list){}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>泛型通配符只能用在形式参数之中。</p>
+</blockquote>
+<ul>
+<li><p>泛型通配符还可以用来指定一个泛型的<strong>上限</strong>与<strong>下限</strong>，格式如下：</p>
+<ul>
+<li>上限：<code>类型名称&lt;? extends ClassA&gt; 对象名称</code></li>
+<li>意义：只能接收 <code>ClassA</code> 及其子类的<em>泛型</em></li>
+<li>下限：<code>类型名称&lt;? super ClassA&gt; 对象名称</code></li>
+<li>意义：只能接收 <code>ClassA</code> 及其父类的<em>泛型</em></li>
+</ul>
+<blockquote>
+<p>泛型虽然有上下限的说法，但泛型类不存在继承关系，即类似于 <code>ArrayList&lt;String&gt; list = new ArrayList&lt;Object&gt;();</code> 的语句都是错误的（ <code>Collection&lt;String&gt; list = new ArrayList&lt;String&gt;();</code> 是合法的）。</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="Day03：List、Set、Collections"><a href="#Day03：List、Set、Collections" class="headerlink" title="Day03：List、Set、Collections"></a>Day03：List、Set、Collections</h1><hr>
+<h2 id="✅-一-数据结构"><a href="#✅-一-数据结构" class="headerlink" title="✅ [一] 数据结构"></a>✅ [一] 数据结构</h2><h3 id="1-数据结构概述"><a href="#1-数据结构概述" class="headerlink" title="1. 数据结构概述"></a>1. 数据结构概述</h3><ul>
+<li><strong>数据结构</strong>是指计算机存储与组织数据的方式，只有深入理解数据结构，才能将高级语言学好。</li>
+<li>数据存储的常用结构有：栈、队列、数组、链表与红黑树。</li>
+</ul>
+<h3 id="2-常用数据结构"><a href="#2-常用数据结构" class="headerlink" title="2. 常用数据结构"></a>2. 常用数据结构</h3><ul>
+<li><p>栈</p>
+<ul>
+<li><strong>栈</strong>（<strong>stack</strong>）又称堆栈，仅允许在一端进行插入与删除操作。</li>
+<li>数据<strong>先进后出</strong>是栈的突出特点。</li>
+<li>栈的入口与出口称为<strong>栈顶</strong>，存与取操作称为<strong>压栈</strong>与<strong>弹栈</strong>。</li>
+</ul>
+</li>
+<li><p>队列</p>
+<ul>
+<li><strong>队列</strong>（<strong>queue</strong>）又称队，仅允许在一端进行插入、在另一端进行删除操作。</li>
+<li>数据<strong>先进先出</strong>是队列的突出特点。</li>
+</ul>
+</li>
+<li><p>数组</p>
+<ul>
+<li><strong>数组</strong>（<strong>array</strong>）是有序的元素序列，会在内存中开辟一段连续的空间用来存放数据。</li>
+<li>利用索引可以快速访问与操作指定位置的元素。</li>
+<li>数组的缺陷在于增加、删除元素不方便。</li>
+</ul>
+</li>
+<li><p>链表</p>
+<ul>
+<li><strong>链表</strong>（<strong>linked list</strong>）由一系列<em>结点</em>（node）组成，这些结点由其存放的数据以及指向下一结点的指针这两部分组成。</li>
+<li>使用链表无法快速地查找指定的元素，但增删元素较为方便。</li>
+</ul>
+</li>
+<li><p>红黑树</p>
+<ul>
+<li><strong>二叉树</strong>（<strong>binary tree</strong>）是指每个结点的<em>度</em>不超过 2 的有序<em>树</em>，每个结点的两边称为<em>左子树</em>与<em>右子树</em>。</li>
+<li><strong>红黑树</strong>（<strong>red black tree</strong>）是<em>二叉搜索树</em><a href="%E5%A6%82%E6%9E%9C%E4%B8%80%E6%A3%B5%E4%BA%8C%E5%8F%89%E6%A0%91%E6%BB%A1%E8%B6%B3%EF%BC%9A%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E9%83%BD%E5%A4%A7%E4%BA%8E%E5%B7%A6%E5%AD%90%E6%A0%91%E4%B8%8A%E7%9A%84%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E4%B8%94%E5%B0%8F%E4%BA%8E%E5%8F%B3%E5%AD%90%E6%A0%91%E4%B8%8A%E7%9A%84%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%EF%BC%8C%E9%82%A3%E4%B9%88%E8%BF%99%E6%98%AF%E4%B8%80%E6%A3%B5%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E3%80%82">^1</a>的一种，它满足以下条件：<ul>
+<li>将每个节点染成红色或黑色。</li>
+<li><em>根节点</em>是黑色的。</li>
+<li>所有的叶子结点 <em>NIL</em> 是黑色的。</li>
+<li>每个红色节点的子节点都是黑色的。</li>
+<li>任何一个节点到它每一个叶子节点的所有路径上，黑色节点数相同。</li>
+</ul>
+</li>
+<li>红黑树是一种自平衡的<em>二叉搜索树</em>。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="✅-二-List-集合"><a href="#✅-二-List-集合" class="headerlink" title="✅ [二] List 集合"></a>✅ [二] List 集合</h2><h3 id="1-List-接口概述"><a href="#1-List-接口概述" class="headerlink" title="1. List 接口概述"></a>1. List 接口概述</h3><ul>
+<li><strong><em><code>java.util.List</code></em></strong> 接口继承自 <code>Collection</code> 接口，是<em>单列集合</em>的一个重要分支。在实现了 <code>List</code> 接口的对象中，所有的元素以线性方式进行存储，且<strong>元素有序</strong>，允许重复。</li>
+<li><code>java.util.ArrayList</code> 类就是 <code>List</code> 的实现类。</li>
+</ul>
+<h3 id="2-常用方法-2"><a href="#2-常用方法-2" class="headerlink" title="2. 常用方法"></a>2. 常用方法</h3><ul>
+<li><p>除了<code>Collection</code> 中的方法外，<code>List</code> 还增加了一些特有方法，主要与其有序性有关：</p>
+<ul>
+<li><code>public void add(int index, E element)</code>：将指定元素添加到集合的指定位置上。</li>
+<li><code>public E get(int index)</code>：返回集合中指定位置的元素。</li>
+<li><code>public E remove(int index)</code>：移除指定位置的元素，并将其返回。</li>
+<li><code>public E set(int index, E element)</code>：用指定元素替换指定位置的元素，返回被替换的元素。</li>
+</ul>
+</li>
+<li><p>下面是 <code>List</code> 接口运用的简单代码：</p>
+</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+		
+		list.add("Beijing");
+		list.add("Guangzhou");
+		list.add("Shenzhen");
+		System.out.println(list);
+		
+		list.add(1, "Shanghai");
+		System.out.println(list);
+		
+		System.out.println(list.remove(3));
+		System.out.println(list);
+			
+		for(int i = 0; i &lt; list.size(); i++){
+			System.out.println(list.get(i));
+		}
+		for(String s : list){
+			System.out.println(s);
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-三-List-的子类"><a href="#✅-三-List-的子类" class="headerlink" title="✅ [三] List 的子类"></a>✅ [三] List 的子类</h2><h3 id="1-ArrayList-类"><a href="#1-ArrayList-类" class="headerlink" title="1. ArrayList 类"></a>1. ArrayList 类</h3><ul>
+<li><code>java.util.ArrayList</code> 集合是最常用的集合类，它的优点是查询与遍历的效率高。</li>
+<li>关于 <code>ArrayList</code> 的更多内容，见基础篇笔记。</li>
+</ul>
+<h3 id="2-LinkedList-类"><a href="#2-LinkedList-类" class="headerlink" title="2. LinkedList 类"></a>2. LinkedList 类</h3><ul>
+<li><p><strong><em><code>java.util.LinkedList</code></em></strong> 集合存储的是<strong>双向链表</strong>结构，但也可以用来表示堆栈或者队列。</p>
+</li>
+<li><p>下面是 <code>LinkedList</code> 的常用方法，了解即可：</p>
+<ul>
+<li><code>public void addFirst(E e)</code>：将指定元素插入列表的头部。</li>
+<li><code>public void addLast(E e)</code>：将指定元素插入列表的尾部。</li>
+<li><code>public E getFirst()</code>：返回列表的头部元素。</li>
+<li><code>public E getLast()</code>：返回列表的尾部元素。</li>
+<li><code>public E removeFirst()</code>：移除并返回列表的头部元素。</li>
+<li><code>public E removeLast()</code>：移除并返回列表的尾部元素。</li>
+<li><code>public E pop()</code>：从列表所表示的堆栈处弹出一个元素。</li>
+<li><code>public void push(E e)</code>：将指定元素推入列表所表示的堆栈。</li>
+<li><code>public boolean isEmpty()</code>：判断列表是否为空。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="✅-四-Set-集合"><a href="#✅-四-Set-集合" class="headerlink" title="✅ [四] Set 集合"></a>✅ [四] Set 集合</h2><h3 id="1-Set-接口概述"><a href="#1-Set-接口概述" class="headerlink" title="1. Set 接口概述"></a>1. Set 接口概述</h3><ul>
+<li><strong><em><code>java.util.Set</code></em></strong> 接口同 <code>List</code> 接口一样继承自 <code>Collection</code>，表示另一种集合。</li>
+<li><code>Set</code> 并没有对 <code>Collection</code> 进行功能上的扩充，即没有写新的方法，但比 <code>Collection</code> 更为严格。而与 <code>List</code> 不同的是，<code>Set</code> 的<strong>元素无序</strong>，并且<strong>元素不允许重复</strong>。</li>
+<li><code>Set</code> 同样有迭代器、增强 <code>for</code> 循环等。</li>
+</ul>
+<h3 id="2-HashSet-集合"><a href="#2-HashSet-集合" class="headerlink" title="2. HashSet 集合"></a>2. HashSet 集合</h3><ul>
+<li><strong><em><code>java.util.HashSet</code></em></strong> 类又叫哈希表，是 <code>Set</code> 接口的一个实现类，它存储的元素不可重复且无序。<code>HashSet</code> 的底层是 <code>java.util.HashMap</code>，以后将会学习。</li>
+<li><code>HashSet</code> 根据对象的<strong>哈希值</strong>来确定元素在集合中的存储位置，因此具有良好的存取和查找性能。</li>
+<li><code>HashSet</code> 依赖 <strong><em><code>hashCode</code></em></strong>（获取当前对象的<em>哈希码值</em>）与 <strong><em><code>equals</code></em></strong>（判断另一对象是否与调用者相等）这两个方法[^2]来保证元素的唯一性。</li>
+<li>下面是 <code>Set</code> 集合存储的简单应用代码：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		HashSet&lt;String&gt; set = new HashSet&lt;String&gt;();
+		
+		set.add(new String("cba"));
+		set.add("abc");
+		set.add("bac");
+		set.add("cba");
+		
+		for(String name : set){
+			System.out.println(name);
+			//cba abc bac，该结果说明在 HashSet 中无法存储重复的元素。
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>[^2]: <code>equals</code> 方法用来比较两个对象，这种关系应具有自反性、对称性与传递性。而哈希码值则用来当做一种标识——如果一个对象给 <code>equals</code> 方法提供的比较信息发生变化，那么 <code>hashCode</code> 的返回值也应该同时发生变化。因此，<code>equals</code> 在比较两个哈希值相等的对象时的返回值是 <code>true</code>，反之为 <code>false</code>。</p>
+<h3 id="3-HashSet-集合存储数据的结构"><a href="#3-HashSet-集合存储数据的结构" class="headerlink" title="3. HashSet 集合存储数据的结构"></a>3. HashSet 集合存储数据的结构</h3><ul>
+<li>在 JDK1.8 以前，哈希表底层采用<em>数组</em>+<em>链表</em>来实现，用链表来处理冲突。但这样的方式当一个桶中的元素较多时效率会降低。因此，在 JDK1.8 之后，哈希表存储采用<em>数组</em>+<em>链表</em>+<em>红黑树</em><a href="%E5%BD%93%E9%93%BE%E8%A1%A8%E9%95%BF%E5%BA%A6%E8%B6%85%E8%BF%87%E4%B8%80%E4%B8%AA%E9%98%88%E5%80%BC%EF%BC%888%EF%BC%89%E6%97%B6%EF%BC%8C%E4%BC%9A%E7%94%A8%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9B%BF%E4%BB%A3%E9%93%BE%E8%A1%A8%E8%BF%9B%E8%A1%8C%E5%AD%98%E5%82%A8%E3%80%82">^3</a>来实现。</li>
+<li>当我们想要用 <code>HashSet</code> 存储自定义类的对象时，需要重写 <code>hashCode</code> 和 <code>equals</code> 方法，才能保证集合中的元素不重复，下面是一个例子：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class Student{
+	private String name;
+	private int age;
+	
+	public Student(){
+	}
+	
+	public Student(String name, int age){
+		this.name = name;
+		this.age = age;
+	}
+	
+	public String getName(){ return name; }
+	public void setName(String name){ this name = name; }
+	public int getAge(){ return age; }
+	public void setAge(int age){ this.age = age; }
+	
+	@Override
+	public boolean equals(Object o){
+		if(this == o)
+			return true;
+		if(o == null || getClass() != o.getClass())
+			return false;
+		Student os = (Student)o;
+		return (age == os.getAge() &amp;&amp; Objects.equals(name, os.getName()));
+	}
+	
+	@Override
+	public int hashCode(){
+		return Object.hash(name, age);
+	}
+}
+
+public class TestClass{
+	public static void main(Strin[] args){
+		HashSet&lt;Student&gt; set = new HashSet&lt;Student&gt;();
+		
+		set.add(new Student("Jack", 17));
+		set.add(new Student("Alice", 18));
+		set.add(new Student("Bill", 19));
+		set.add(new Student("Jack", 17));
+		
+		for(Student stu : set){
+			System.out.println(stu);
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-LinkedHashSet-类"><a href="#4-LinkedHashSet-类" class="headerlink" title="4. LinkedHashSet 类"></a>4. LinkedHashSet 类</h3><ul>
+<li><code>HashSet</code> 可以保证元素唯一，而且其中的元素无序。而如果既要保证唯一，又需要元素保持有序，可以使用它的子类 <strong><em><code>java.util.LinkedHashSet</code></em></strong>，它是由<em>链表</em>与<em>哈希表</em>组合实现的一种结构。</li>
+<li><code>LinkedHashSet</code> 对象的<em>迭代器</em>通过 <code>next</code> 和 <code>hasNext</code> 方法，可以有序地组织与访问元素。</li>
+</ul>
+<h3 id="5-可变参数"><a href="#5-可变参数" class="headerlink" title="5. 可变参数"></a>5. 可变参数</h3><ul>
+<li>如果一个方法的参数列表由多个相同类型的参数组成，可以对其进行简化，即 <code>public static void func(int[] args){}</code> 可以由 <strong><em><code>public static void func(int... args){}</code></em></strong> 代替，前者的参数需要以<em>数组</em>的形式传递，而后者的参数可以直接传递，称为<strong>可变参数</strong>。例如：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		int[] arr = { 1, 2, 6, 3 };
+		System.out.println(getSum(arr));
+	}
+	
+	public static int getSum(int... arr){
+		int sum = 0;
+		for(int a : arr)
+			sum += a;
+		return sum;
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>关于可变参数，有如下几点注意事项：<ul>
+<li>可变参数至多有一个。</li>
+<li>可变参数的实际参数可以为空，效果相当于传递一个空数组。</li>
+<li>可变参数可以与其他参数一起组成参数列表，但可变参数要写在其他参数的后面，即末尾的位置。</li>
+<li>不要在一个类中同时定义分别采用上述两种参数书写方式的两个同名方法，以保证代码的明确性。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="✅-五-Collections-类"><a href="#✅-五-Collections-类" class="headerlink" title="✅ [五] Collections 类"></a>✅ [五] Collections 类</h2><h3 id="1-Collections-类概述"><a href="#1-Collections-类概述" class="headerlink" title="1. Collections 类概述"></a>1. Collections 类概述</h3><ul>
+<li><strong><em><code>java.utils.Collections</code></em></strong> 是集合工具类，用来对集合进行操作。</li>
+</ul>
+<h3 id="2-Collections-常用方法"><a href="#2-Collections-常用方法" class="headerlink" title="2. Collections 常用方法"></a>2. Collections 常用方法</h3><ul>
+<li><p><code>Collections</code> 类的常用方法有以下几个：</p>
+<ul>
+<li><code>public static &lt;T&gt; boolean addAll(Collection&lt;T&gt; c, T... elements)</code>：往集合中添加一些元素。</li>
+<li><code>public static void shuffle(List&lt;?&gt; list)</code>：打乱集合顺序。</li>
+<li><code>public static &lt;T&gt; void sort(List&lt;T&gt; list)</code>：将集合中的元素按照默认规则排序。</li>
+<li><code>public static &lt;T&gt; void sort(List&lt;T&gt; list, Comparator&lt;? super T&gt;)</code>：将集合中的元素按照指定规则排序。</li>
+</ul>
+</li>
+<li><p>下面是使用的简单代码：</p>
+</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+		/*
+		list.add(8);
+		list.add(3);
+		list.add(5);
+		旧写法*/
+		Collections.addAll(list, 8, 3, 5);
+		System.out.println(list);	//[8, 3, 5]
+		Collections.sort(list);
+		System.out.println(list);	//[3, 5, 8]
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-Comparator-接口"><a href="#3-Comparator-接口" class="headerlink" title="3. Comparator 接口"></a>3. Comparator 接口</h3><ul>
+<li><code>public static &lt;T&gt; void sort(List&lt;T&gt; list)</code> 方法是将集合中元素按照<em>默认规则</em>排序，而这里的<em>默认规则</em>实际上取决于泛型 <code>T</code> 有没有实现 <code>java.lang.Comparable</code> 接口，因此，如果我们需要更改规则，就需要用到另一个重载的方法：<code>public static &lt;T&gt; void sort(List&lt;T&gt; list, Comparator&lt;? super T&gt;)</code>。</li>
+<li><strong><em><code>java.util.Comparator</code></em></strong> 接口代表一种比较器，它的实现类的对象集合是<em>偏序集合</em>，即对象间可比。</li>
+<li>自定义比较规则需要重写<code>Comparator</code> 中的 <strong><em><code>compare</code></em></strong> 方法，下面是一个示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
+		Collections.addAll(list, "cba", "acb", "bac");
+		Collections.sort(list);
+		System.out.println(list);	//[acb, bac, cba]
+
+		Collections.sort(list, new Comparator&lt;String&gt;(){
+			@Override
+			public int compare(String o1, String o2){
+				return o1.charAt(2) - o2.charAt(2);
+			}
+		});
+		System.out.println(list);	//[cba, acb, bac]
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>若 <code>compare</code> 的两个参数分别为 <code>o1</code>, <code>o2</code>，那么若要元素升序排列，需要用 <code>o1</code> 的内容减去 <code>o2</code> 的；降序则相反。</p>
+</blockquote>
+<h3 id="4-Comparable-接口"><a href="#4-Comparable-接口" class="headerlink" title="4. Comparable 接口"></a>4. Comparable 接口</h3><ul>
+<li><p><strong><em><code>java.lang.Comparable</code></em></strong> 接口的实现类可以相互比较。</p>
+</li>
+<li><p>若想要自定义的类自带可比性，那么只需要让它继承 <code>Comparable</code> 接口并重写 <strong><em><code>compareTo</code></em></strong> 方法即可，如：</p>
+</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class Student implements Comparable&lt;Student&gt;{
+	private String id;
+	...
+	@Override
+	public int compareTo(Student o){
+		return this.id.compareTo(o.id);
+		//通过丰富方法的内容，可以实现更为复杂的排序方式。
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<hr>
+<h1 id="Day04：Map、斗地主案例"><a href="#Day04：Map、斗地主案例" class="headerlink" title="Day04：Map、斗地主案例"></a>Day04：Map、斗地主案例</h1><hr>
+<h2 id="✅-一-Map-集合"><a href="#✅-一-Map-集合" class="headerlink" title="✅ [一] Map 集合"></a>✅ [一] Map 集合</h2><h3 id="1-Map-接口概述"><a href="#1-Map-接口概述" class="headerlink" title="1. Map 接口概述"></a>1. Map 接口概述</h3><ul>
+<li>现实生活中，有很多事物一一对应，产生了<strong>映射关系</strong>，例如身份证号与公民。**<em><code>java.util.Map</code>**</em> 接口是 Java 提供的专门用来存放此类对象的集合。</li>
+<li><code>Map</code> 与 <code>Collection</code> 这两个接口的根本区别在于，<code>Collection</code> 中的元素独立存在，而 <code>Map</code> 中的元素含有<strong>成对存在</strong>的<strong>键</strong>（<strong>key</strong>）与<strong>值</strong>（<strong>value</strong>），它们中的集合分别叫做单列集合和双列集合。</li>
+<li>在 <code>Map</code> 中，**<em>键</em>不允许重复*<em>，但</em>值<em>可以。每个</em>键<em>至多对应一个</em>值*。</li>
+<li>与 <code>Set</code> 类似，<code>Map</code> 的子类需要重写 <code>hashCode</code> 方法与 <code>equals</code> 方法以保证<em>键</em>的唯一性。</li>
+</ul>
+<h3 id="2-常用子类"><a href="#2-常用子类" class="headerlink" title="2. 常用子类"></a>2. 常用子类</h3><ul>
+<li><code>Map</code> 有两个常用子类：<ul>
+<li><code>HashMap&lt;K,V&gt;</code> 是存储数据采用的<em>哈希表</em>结构，元素的存取顺序不要求一致。</li>
+<li><code>LinkedHashMap&lt;K,V&gt;</code> 继承了 <code>HashMap</code>，是存储数据采用的<em>哈希表</em>+<em>链表</em>结构，元素的存取顺序是一致的。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><code>Map</code> 接口带有泛型 <code>&lt;K,V&gt;</code>，其中 <code>K</code> 和 <code>V</code> 这两种类型可以相同，也可以不同。</p>
+</blockquote>
+<h3 id="3-常用方法-1"><a href="#3-常用方法-1" class="headerlink" title="3. 常用方法"></a>3. 常用方法</h3><ul>
+<li><p><code>Map</code> 中定义的方法中有以下常用方法：</p>
+<ul>
+<li><code>public V put(K key, V value)</code>：把指定的<em>键</em>与指定的<em>值</em>添加到集合中。</li>
+<li><code>public V remove(Object key)</code>：把指定的<em>键</em>对应的键值对从集合中删除，返回被删除元素的<em>值</em>。</li>
+<li><code>public V get(Object key)</code>：根据指定的<em>键</em>，在集合中获取对应的<em>值</em>。</li>
+<li><code>boolean containKey(Object key)</code>：判断集合中是否包含指定的<em>键</em>。</li>
+<li><code>public Set&lt;K&gt; keySet()</code>：获取集合中所有的<em>键</em>，将它们存放到一个 <code>Set</code> 集合中。</li>
+<li><code>public Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()</code>：获取集合中所有的键值对，将它们存放到一个 <code>Set</code> 集合中。</li>
+</ul>
+<blockquote>
+<p>若集合中已有对应的<em>键</em>，则 <code>put</code> 函数将键值对的<em>值</em>更新为 <code>value</code>，并返回原来的<em>值</em>，否则将键值对加入，并返回 <code>null</code>。</p>
+<p>遍历集合时，可以先用 <code>keySet</code> 方法获取一个 <code>Set</code> 集合，通过遍历这个集合的方法遍历原集合。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="4-Entry-接口"><a href="#4-Entry-接口" class="headerlink" title="4. Entry 接口"></a>4. Entry 接口</h3><ul>
+<li><strong><em><code>Map.Entry</code></em></strong> 接口定义在 <code>Map</code> 内，它的作用是将所有的键值对都封装成对象。</li>
+<li><code>Entry</code> 中 <code>public K getKey()</code> 和 <code>public V getValue()</code> 方法分别可以获得键值对的<em>键</em>与<em>值</em>，而 <code>Map</code> 集合中也定义了 <code>entrySet</code> 方法来获得所有的键值对。</li>
+<li>下面是简单使用 <code>Entry</code> 的代码：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		HashMap&lt;String, int&gt; map = new HashMap&lt;String, int&gt;();
+		map.put("China", 1);
+		map.put("America", 2);
+		map.put("Japan", 3);
+		
+		Set&lt;Entry&lt;String, int&gt;&gt; entrySet = map.entrySet();
+		for(Entry&lt;String, int&gt; entry : entrySet){
+			String k = entry.getKey();
+			int v = entry.getValue();
+			System.out.println(k + "--" + v);
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><code>LinkedHashMap</code> 的遍历方法类似，但 <code>LinkedHashMap</code> 会按照存放的先后顺序来取元素，而非<em>键</em>的顺序。</p>
+</blockquote>
+<h3 id="5-HashTable-类"><a href="#5-HashTable-类" class="headerlink" title="5. HashTable 类"></a>5. HashTable 类</h3><ul>
+<li><strong><em><code>java.util.HashTable</code></em></strong> 类是最早的哈希表，它实现了 <code>Map</code>，可以存放任何非 <code>null</code> 的键值对（否则抛出空指针<em>异常</em>）。</li>
+<li>正如 <code>Vector</code> 被 <code>ArrayList</code> 取代一样，<code>HashTable</code> 也已经被 <code>HashMap</code> 所取代。但 <code>HashTable</code> 的一个子类 <code>Properties</code> 依然活跃，它是唯一和 IO 流相结合的集合。</li>
+</ul>
+<h3 id="6-存储含自定义类型的键值对"><a href="#6-存储含自定义类型的键值对" class="headerlink" title="6. 存储含自定义类型的键值对"></a>6. 存储含自定义类型的键值对</h3><ul>
+<li><code>HashMap</code> 与 <code>LinkedHashMap</code> 中的<em>键</em>与<em>值</em>的类型都可以是自定义类型，但注意这些类在作为<em>键</em>的类型时，需要重写 <code>equals</code> 与 <code>hashCode</code> 方法，如：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class Student{
+	private String name;
+	private int age;
+	
+	//构造函数、getter、setter 此处省略
+	
+	@Override
+	public boolean equals(Object o){
+		if(this == o)
+			return true;
+		if(o == null || getClass != o.getClass())
+			return false;
+		Student student = (Student) o;
+		return age == student.getAge() &amp;&amp; Objects.equals(name, student.getName());
+	}
+	
+	@Override
+	public int hashCode(){
+		return Objects.hash(name, age);
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-二-关于各种集合的补充知识"><a href="#✅-二-关于各种集合的补充知识" class="headerlink" title="✅ [二] 关于各种集合的补充知识"></a>✅ [二] 关于各种集合的补充知识</h2><h3 id="1-JDK9-对集合添加的优化"><a href="#1-JDK9-对集合添加的优化" class="headerlink" title="1. JDK9 对集合添加的优化"></a>1. JDK9 对集合添加的优化</h3><ul>
+<li>在 <code>List</code>, <code>Set</code> 及 <code>Map</code> 三个接口中，都有一个<em>静态</em>方法 <code>of</code> 用来方便地创建它们的<strong>不可变</strong>实例。如：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">Set&lt;String&gt; strs = Set.of("a", "b", "c");
+Map&lt;String, Integer&gt; strs = Map.of("a", 1, "b", 2, "c", 3);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<blockquote>
+<p><code>of</code> 方法的参数中不能出现重复数据或者 <code>null</code>，否则会抛出非法参数<em>异常</em>。</p>
+<p><code>of</code> 方法得到的集合不可再改变，即无法对其使用 <code>add</code>, <code>put</code> 等方法。</p>
+<p>这三个接口的父接口与子类并没有 <code>of</code> 方法。</p>
+</blockquote>
+<h3 id="2-Debug-追踪"><a href="#2-Debug-追踪" class="headerlink" title="2. Debug 追踪"></a>2. Debug 追踪</h3><ul>
+<li><p>Debug 调试程序可以让代码逐行执行，调试程序中出现的 bug。</p>
+</li>
+<li><p>追踪的方法是：在行号的右边单击可以添加断点，再选择 Debug 执行程序。</p>
+</li>
+<li><p>可以利用以下快捷键来帮助执行：</p>
+<ul>
+<li><code>F8</code>：逐行执行程序</li>
+<li><code>F7</code>：进入方法</li>
+<li><code>Shift</code>+<code>F8</code>：跳出方法</li>
+<li><code>F9</code>：跳到下一个断点</li>
+<li><code>Ctrl</code>+<code>F2</code>：退出 Debug 模式</li>
+<li>单击 <code>Console</code>：切换到控制台</li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="Day05：异常、线程"><a href="#Day05：异常、线程" class="headerlink" title="Day05：异常、线程"></a>Day05：异常、线程</h1><hr>
+<h2 id="✅-一-异常的产生"><a href="#✅-一-异常的产生" class="headerlink" title="✅ [一] 异常的产生"></a>✅ [一] 异常的产生</h2><h3 id="1-异常概述"><a href="#1-异常概述" class="headerlink" title="1. 异常概述"></a>1. 异常概述</h3><ul>
+<li><strong>异常</strong>是指程序在<strong>执行过程中</strong>出现的异常情况，它会导致 JVM 的非正常停止。</li>
+<li>在 Java 等语言中，异常本身是一个类，产生异常的过程实际上是创建了并抛出了异常对象。</li>
+</ul>
+<h3 id="2-异常体系与分类"><a href="#2-异常体系与分类" class="headerlink" title="2. 异常体系与分类"></a>2. 异常体系与分类</h3><ul>
+<li><p>异常的根类是 <strong><em><code>java.lang.Throwable</code></em></strong>，它是异常的总体系，下面的两个子类分别是 <strong><em><code>java.lang.Error</code></em></strong> 和 <strong><em><code>java.lang.Exception</code></em></strong>，前者是指严重错误，而后者就是异常。</p>
+</li>
+<li><p><code>Throwable</code> 中有以下常用方法：</p>
+<ul>
+<li><code>public String getMessage()</code>：获取发生异常的原因。</li>
+<li><code>public String toString()</code>：获取异常的类型与异常描述信息。</li>
+<li><code>public void printStackTrace()</code>：打印异常的详细信息，包括异常的类型、原因、位置。</li>
+</ul>
+<blockquote>
+<p>在遇到异常时，到 API 中查询类名即可。</p>
+</blockquote>
+</li>
+<li><p>异常主要分为两类：</p>
+<ul>
+<li><strong>编译时期异常</strong>：在编译时期能够检查出的异常，如果不处理，则无法编译。</li>
+<li><strong>运行时期异常</strong>（**<em><code>RuntimeException</code>**</em>）：在运行时期才能检查出的异常，这样的异常不一定要处理。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-异常的产生过程"><a href="#3-异常的产生过程" class="headerlink" title="3.异常的产生过程"></a>3.异常的产生过程</h3><ul>
+<li>对于以下实例，分析异常的产生过程：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		int[] arr = {1, 2, 3};
+		int i = getElement(arr, 3);
+		System.out.println(i);
+	}
+
+	private static int getElement(int[] arr, int index){
+		return arr[index];
+	}
+}
+
+/*
+结果：
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 3
+	at erron.begin.package.DemoExceptionMainClass.getElement(Class.java:9)
+	at erron.begin.package.DemoExceptionMainClass.main(Class.java:4)*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p>异常的产生过程如下：</p>
+<ol>
+<li><p>数组中不存在 3 这一索引，JVM 检测出程序发生异常；</p>
+</li>
+<li><p>JVM 创建一个异常对象 <code>new ArrayIndexOutOfBoundsException("3");</code>；</p>
+</li>
+<li><p>在 <code>getElement</code> 方法中，找不到该异常的处理逻辑，JVM 把异常对象抛给 <code>getElement</code> 的调用者 <code>main</code> 方法；</p>
+</li>
+<li><p><code>main</code> 方法接收异常对象，但在 <code>main</code> 中也找不到该异常的处理逻辑，继续将异常抛给 <code>main</code> 方法的调用者 JVM 进行处理；</p>
+</li>
+<li><p>JVM 接收到异常对象，将会执行：</p>
+<ol>
+<li>将异常对象，包括其内容、原因和位置以红色字体打印在控制台；</li>
+<li>终止当前执行的程序，即进行中断处理。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="✅-二-异常的处理"><a href="#✅-二-异常的处理" class="headerlink" title="✅ [二] 异常的处理"></a>✅ [二] 异常的处理</h2><h3 id="1-异常处理概述"><a href="#1-异常处理概述" class="headerlink" title="1. 异常处理概述"></a>1. 异常处理概述</h3><ul>
+<li>处理异常会用到五个最常见的关键字：<code>throw</code>, <code>throws</code>, <code>try</code>, <code>catch</code>, <code>finally</code>。</li>
+</ul>
+<h3 id="2-throw-抛出异常"><a href="#2-throw-抛出异常" class="headerlink" title="2. throw 抛出异常"></a>2. throw 抛出异常</h3><ul>
+<li><p>在 Java 中提供了 <strong><em><code>throw</code></em></strong> 关键字，它可以用来<strong>抛出</strong>一个指定的异常对象，抛出分为两步：</p>
+<ol>
+<li>创建一个异常对象，在其中封装提示信息；</li>
+<li>将异常对象抛出给调用者，这个过程就需要用到 <code>throw</code> 关键字。</li>
+</ol>
+</li>
+<li><p><code>throw</code> 被用在<strong>方法体</strong>内，使用的格式为 <code>throw new 异常类类名(参数);</code>，例如：</p>
+</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		int[] arr = {1, 2, 3};
+		int i = getElement(arr, 3);
+		System.out.println(i);
+	}
+
+	private static int getElement(int[] arr, int index){
+		if(index &lt; 0 || index &gt;= arr.length){
+			throw new ArrayIndexOutOfBoundsException("索引越界了你直道不直道？")
+		}
+		return arr[index];
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>对于调用者来说，如果接收到一个 <code>throw</code> 的编译异常，要么会进行<em>捕获</em>（<code>catch</code>）处理，要么会<em>声明</em>（<code>throws</code>）这个异常。</li>
+</ul>
+<h3 id="3-Objects-非空判断"><a href="#3-Objects-非空判断" class="headerlink" title="3. Objects 非空判断"></a>3. Objects 非空判断</h3><ul>
+<li>在之前的工具类 <code>Objects</code> 中我们提到，其中定义的方法，例如 <code>equals</code> ，都是空指针容忍（<em>null-tolerant</em>）的，在 <code>Objects</code> 之中，有对空对象进行异常抛出的操作：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public static &lt;T&gt; T requireNonNull(T obj){
+	if(obj == null)
+		throw new NullPointerException();
+	return obj;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-throws-声明异常"><a href="#4-throws-声明异常" class="headerlink" title="4. throws 声明异常"></a>4. throws 声明异常</h3><ul>
+<li>Java 中的 <strong><em><code>throws</code></em></strong> 关键字用来为方法<strong>声明</strong>异常，即将问题标示出来并报告给调用者。当一个异常对象没有被<em>捕获</em>时，方法需要通过 <code>throws</code> 关键字进行声明来让调用者进行处理。</li>
+<li><code>throws</code> 被用在方法的<strong>声明</strong>部分，它表示当前的方法并不处理异常，而当前方法的调用者需要处理可能会 <code>throw</code> 的异常，多个异常间用 <code>,</code> 隔开，例如：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(Stirng[] args) throws IOException{
+		read("b.txt");
+	}
+	
+	public static void read(String path) throws FileNotFoundException, IOExcepiton{
+		if(!path.equals("")){		//假设一种情况
+			throw new FileNotFoundException("文件不存在");
+		}
+		if(!path.equals("a.txt")){	//另一种情况
+			throw new IOException("文件名不符");
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-try-catch-捕获异常"><a href="#5-try-catch-捕获异常" class="headerlink" title="5. try-catch 捕获异常"></a>5. try-catch 捕获异常</h3><ul>
+<li>在 Java 中，异常要么被<strong>捕获</strong>，要么被<em>声明</em>并<em>抛出</em>，*<strong><code>try</code>*** 和 *</strong><code>catch</code>*** 关键字就是用来针对某些语句而对某些异常进行捕获与处理的。</li>
+<li><code>try</code>, <code>catch</code> 被用在可能出现异常的代码处，格式如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">try{
+	//可能出现异常的代码
+}catch(异常类类名 e){
+	//处理异常的代码
+	//记录、打印、继续抛出异常
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>下面是捕获异常的一个简单实例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		try{
+			read("b.txt");
+		}catch(FileNotFoundException e){
+			System.out.println(e);
+		}
+	}
+	
+	public static void read(String path) throws FileNotFoundException{
+		if(!path.equals("")){
+			throw new FileNotFoundException("文件不存在");
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><code>try</code> 代码块中可能抛出什么类型的异常，<code>catch</code> 的参数就只能定义这些类型的异常对象。</p>
+<p><code>try</code> 与 <code>catch</code> 一定一同出现，不能单独使用。</p>
+</blockquote>
+<h3 id="6-finally-代码块"><a href="#6-finally-代码块" class="headerlink" title="6. finally 代码块"></a>6. finally 代码块</h3><ul>
+<li>在 Java 中，如果遇到一些无法处理的异常，JVM 会终止程序的执行，但在许多时候，程序有些语句是必要执行的，比如一些被打开的物理资源的关闭，这时需要用到 <strong><em><code>finally</code></em></strong> 关键字，将这些<strong>必须执行</strong>的代码装入代码块中。</li>
+<li><code>finally</code> 与 <code>try-catch</code> 连用，格式如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">try{
+	//可能出现异常的代码
+}catch(异常类类名 e){
+	//处理异常的代码
+	//记录、打印、继续抛出异常
+}finally{
+	//必须执行的代码
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><code>finally</code> 代码块中的代码默认执行，且一定执行，除非 <code>try</code> 或 <code>catch</code> 里调用了退出 JVM 的相关方法。</p>
+</blockquote>
+<h3 id="7-处理异常的其他事项"><a href="#7-处理异常的其他事项" class="headerlink" title="7. 处理异常的其他事项"></a>7. 处理异常的其他事项</h3><ul>
+<li>如果程序有多个异常，一般有三种处理模式：<ul>
+<li>分别处理各个异常。</li>
+<li>一次捕获再多次处理各个异常。</li>
+<li>一次捕获并一次处理多个异常。</li>
+</ul>
+</li>
+<li>一般来说，会采取第二种模式，处理异常的格式如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">try{
+	//可能出现异常的代码
+}catch(异常类A e){
+	//处理异常的代码
+	//记录、打印、继续抛出异常
+}catch(异常类B e){
+	//处理异常的代码
+	//记录、打印、继续抛出异常
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>这样的格式，要求多个 <code>catch</code> 的参数类型不相同。若多个异常之间存在继承关系，那么要求先处理子类异常再处理父类异常。</p>
+</blockquote>
+<ul>
+<li>关于异常，注意以下几点：<ul>
+<li>运行时异常（<code>RuntimeException</code>）可以不处理，既不<em>捕获</em>也不<em>声明抛出</em>。</li>
+<li>由于 <code>finally</code> 代码块中的内容必然执行，所以避免在其中使用 <code>return</code> 关键字。</li>
+<li>如果父类抛出了多个异常，那么子类在重写父类方法时可以抛出这些异常及它们的子类，也可以不抛出。</li>
+<li>如果父类方法没有抛出异常，那么子类在重写该方法时也不能抛出异常，若子类产生异常，只能<em>捕获</em>而不能<em>声明抛出</em>。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="✅-三-自定义异常"><a href="#✅-三-自定义异常" class="headerlink" title="✅ [三] 自定义异常"></a>✅ [三] 自定义异常</h2><h3 id="1-自定义异常概述"><a href="#1-自定义异常概述" class="headerlink" title="1. 自定义异常概述"></a>1. 自定义异常概述</h3><ul>
+<li>JDK 中的异常类型不可能将所有异常情况都涵盖，因此我们需要自定义异常。</li>
+<li>异常类的定义和类的定义类似，只是编译期的异常需要继承 <code>java.lang.Exception</code>，运行期的异常需要继承 <code>java.lang.RuntimeException</code>。</li>
+</ul>
+<h3 id="2-自定义异常实例"><a href="#2-自定义异常实例" class="headerlink" title="2. 自定义异常实例"></a>2. 自定义异常实例</h3><ul>
+<li>下面是一个自定义异常的简单案例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class RegisterException extends Exception{
+	public RegisterException(){
+
+	}
+
+	public RegisterException(String message){
+		super(message);
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	private static String[] names = {"Bill", "Hill", "Jill"};
+
+	public static void main(String[] args){
+		try{
+			checkUserName("Nill");
+			System.out.println("注册成功。");
+		}catch(RegisterException e){
+			e.printStackTrace();
+		}
+	}
+
+	private static boolean checkUserName(String uName) throws RegisterException{
+		for(String name : names){
+			if(name.equals(uName))
+				throw new RegisterException(name + "已被注册了哦。");
+		}
+		return true;
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-四-多线程"><a href="#✅-四-多线程" class="headerlink" title="✅ [四] 多线程"></a>✅ [四] 多线程</h2><h3 id="1-并发与并行"><a href="#1-并发与并行" class="headerlink" title="1. 并发与并行"></a>1. 并发与并行</h3><ul>
+<li>在认识多线程之前，需要先了解两个概念：<ul>
+<li><strong>并发</strong>是指两个或多个事件在<strong>同一时间段内</strong>发生。</li>
+<li><strong>并行</strong>是指两个或多个事件在<strong>同一时刻</strong>发生。</li>
+<li>并发强调<strong>交替</strong>，并行强调<strong>同时</strong>。</li>
+</ul>
+</li>
+<li>我们使用计算机的过程中，<em>并发</em>指的是宏观上有多个程序同时运行。在单 CPU 系统中，每一时刻至多有一个程序执行，无法<em>并行</em>处理多个任务，但当频率足够高的时候，宏观上就能有<em>并行</em>的效果。</li>
+</ul>
+<h3 id="2-进程与线程"><a href="#2-进程与线程" class="headerlink" title="2. 进程与线程"></a>2. 进程与线程</h3><ul>
+<li>这里又有两个相近的概念：<ul>
+<li><strong>进程</strong>是指进入到内存中运行的应用程序。每个进程有独立的内存空间，进程是<strong>系统运行程序的基本单位</strong>。系统运行程序，本质上是进程从创建、运行到消亡的过程。</li>
+<li><strong>线程</strong>是<em>进程</em>中的一个执行单元，可以理解为程序到 CPU 的执行路径，它负责当前进程中程序的执行。一个进程中含有<strong>一个或多个</strong>线程，含多个线程的应用程序称为<strong>多线程程序</strong>。</li>
+</ul>
+</li>
+<li>一个程序运行后至少有一个进程，每个进程可以包含多个线程，CPU 会在多个线程中作高速的切换。</li>
+<li>于是引出<strong>多线程</strong>，多线程是指从软件或者硬件上实现多个线程<em>并发</em>执行的技术。</li>
+</ul>
+<h3 id="3-线程调度"><a href="#3-线程调度" class="headerlink" title="3. 线程调度"></a>3. 线程调度</h3><ul>
+<li>线程的调度分为两种模式：<ul>
+<li><strong>分时调度</strong>：所有线程轮流使用 CPU，平均分配 CPU 被各个线程占用的时间。</li>
+<li><strong>抢占式调度</strong>：线程根据优先级高低使用 CPU，如果线程的优先级相同，那么随机选择。Java 使用的就是该种模式。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>在 Windows 系统中，<code>任务管理器</code>–&gt;<code>详细信息</code>–&gt;右键单击任一进程，可以设置进程的优先级。</p>
+</blockquote>
+<h3 id="4-主线程"><a href="#4-主线程" class="headerlink" title="4. 主线程"></a>4. 主线程</h3><ul>
+<li><strong>单线程程序</strong>是指仅有一个线程的程序。</li>
+<li>程序执行的入口是 <code>main</code> 方法，<code>main</code> 方法进入栈内存时，JVM 会开辟一条 <code>main</code> 方法到 CPU 的执行路径，这个路径就是<strong>主线程</strong>。</li>
+</ul>
+<h3 id="5-创建线程类"><a href="#5-创建线程类" class="headerlink" title="5. 创建线程类"></a>5. 创建线程类</h3><ul>
+<li><strong><em><code>java.lang.Thread</code></em></strong> 类代表线程，所有的线程对象必须是 <code>Thread</code> 或者其子类的实例。每个线程的作用是完成一定任务，即执行一段顺序执行的代码。</li>
+<li>Java 中<strong>创建</strong>与<strong>启动</strong>多线程的步骤如下：<ol>
+<li>定义 <code>Thread</code> 类的子类，并重写 <strong><em><code>run</code></em></strong> 方法，<code>run</code> 方法的方法体即为线程需要完成的任务，<code>run</code> 方法又称为线程执行体。</li>
+<li>创建该子类的实例，即创建了线程对象。</li>
+<li>调用线程对象的 <strong><em><code>start</code></em></strong> 方法来启动该线程。</li>
+</ol>
+</li>
+<li>下面是一个示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class MyThread extends Thread{
+	public MyThread(String name){
+		super(name);
+	}
+
+	@Override
+	public void run(){
+		for(int i = 0; i &lt; 10; i++){
+			System.out.println(getName() + i + "正在执行。");
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		MyThread mt = new MyThread("新的线程");
+		mt.start();
+		for(int i = 0; i &lt; 10; i++){
+			System.out.println("主方法线程" + i + "正在执行。");
+		}
+	}
+}
+/*
+输出结果：
+主方法线程0正在执行。
+主方法线程1正在执行。
+主方法线程2正在执行。
+主方法线程3正在执行。
+主方法线程4正在执行。
+主方法线程5正在执行。
+新的线程0正在执行。
+新的线程1正在执行。
+主方法线程6正在执行。
+新的线程2正在执行。
+主方法线程7正在执行。
+新的线程3正在执行。
+主方法线程8正在执行。
+新的线程4正在执行。
+主方法线程9正在执行。
+新的线程5正在执行。
+新的线程6正在执行。
+新的线程7正在执行。
+新的线程8正在执行。
+新的线程9正在执行。
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>创建多线程的方式不止一种，更多方式会在 Day06 部分介绍。</p>
+</blockquote>
+<hr>
+<hr>
+<h1 id="Day06：线程、同步"><a href="#Day06：线程、同步" class="headerlink" title="Day06：线程、同步"></a>Day06：线程、同步</h1><hr>
+<h2 id="✅-一-多线程的使用"><a href="#✅-一-多线程的使用" class="headerlink" title="✅ [一] 多线程的使用"></a>✅ [一] 多线程的使用</h2><h3 id="1-线程与内存"><a href="#1-线程与内存" class="headerlink" title="1. 线程与内存"></a>1. 线程与内存</h3><ul>
+<li>当程序运行 <code>main</code> 方法时，JVM 随之创建主线程。而每当一个线程对象的 <code>start</code> 方法被调用，就有新的线程启动。</li>
+<li>在多线程执行时，每一个执行线程（当 <code>start</code> 方法被调用时）都能分配到所属的<strong>栈</strong>内存空间，进行方法的压栈和弹栈。</li>
+<li>当所有的线程都在栈内存中释放，就意味着整个进程结束了。</li>
+</ul>
+<h3 id="2-Thread-类"><a href="#2-Thread-类" class="headerlink" title="2. Thread 类"></a>2. Thread 类</h3><ul>
+<li>之前简要介绍过 <code>Thread</code> 类，下面再介绍它的一些常用方法：<ul>
+<li><code>public Thread()</code>：分配一个新的线程对象。</li>
+<li><code>public Thread(String name)</code>：分配一个指定名字的新线程对象。</li>
+<li><code>public Thread(Runnable target)</code>：分配一个带有指定目标的新线程对象。</li>
+<li><code>public Thread(Runnable target, String name)</code>：分配一个指定名字且带有指定目标的新线程对象。</li>
+<li><code>public String getName()</code>：获取当前线程的名称。</li>
+<li><code>public void start()</code>：开始执行当前线程（JVM 接下来自动调用 <code>run</code> 方法）。</li>
+<li><code>public void run()</code>：执行此线程将要执行的任务。</li>
+<li><code>public static void sleep(long millis)</code>：使当前正在执行的线程以指定的毫秒数暂时停止执行。</li>
+<li><code>public static Thread currentThread()</code>：返回对当前正在执行的线程对象的引用。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-线程的创建"><a href="#3-线程的创建" class="headerlink" title="3. 线程的创建"></a>3. 线程的创建</h3><ul>
+<li>之前介绍过定义 <code>Thread</code> 类的子类以创建线程的方式。接下来介绍第二种。</li>
+<li><strong><em><code>java.lang.Runnable</code></em></strong> 接口可以理解成线程的目标，可以通过定义实现 <code>Runnable</code> 的类来创建线程，分以下几步：<ol>
+<li>定义 <code>Runnable</code> 接口的实现类，并重写 <code>run</code> 方法，方法体同样是线程的执行体。</li>
+<li>创建该类的实例，并将其作为 <code>Thread</code> 的 <code>target</code> 参数来创建 <code>Thread</code> 对象，该 <code>Thread</code> 对象才是真正的线程 对象。</li>
+<li>调用上述的 <code>Thread</code> 对象来启动线程。</li>
+</ol>
+</li>
+<li>下面是用该方式创建线程的简单示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class MyRunnable implements Runnable{
+	@Override
+	public void run(){
+		for(int i = 0; i &lt; 10; i++)
+			System.out.println(Thread.currentThread().getName() + "--" + i);
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		MyRunnable mr = new MyRunnable();
+		Thread t = new Thread(mr, "小明");
+		t.start();
+		for(int i = 0; i &lt; 10; i++)
+			System.out.println("小亮--" + i);
+	}
+}
+/*
+运行结果：
+小亮--0
+小亮--1
+小亮--2
+小亮--3
+小亮--4
+小亮--5
+小亮--6
+小明--0
+小明--1
+小明--2
+小亮--7
+小亮--8
+小亮--9
+小明--3
+小明--4
+小明--5
+小明--6
+小明--7
+小明--8
+小明--9
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>实现了 <code>Runnable</code> 接口后，一个类就有了线程类的特征。实际上，<code>Thread</code> 类也是 <code>Runnable</code> 的实现类。</li>
+<li>要注意明确：线程的对象是 <code>Thread</code> 的实例而非 <code>Runnable</code> 的，线程对象只是负责执行 <code>target</code> 的 <code>run</code> 方法。</li>
+</ul>
+<h3 id="4-Thread-和-Runnable"><a href="#4-Thread-和-Runnable" class="headerlink" title="4. Thread 和 Runnable"></a>4. Thread 和 Runnable</h3><ul>
+<li>既然 <code>Thread</code> 才是真正的线程对象，那么为什么实现 <code>Runnable</code> 的类不直接继承 <code>Thread</code> 呢？实际上，<code>Runnable</code> 接口的优势有以下几点：<ul>
+<li>适合多个相同的程序代码的线程共享同一资源。</li>
+<li>可以不受 Java 语言单继承局限性的影响。</li>
+<li>代码可以被多个线程共享；二者各自独立，通过降低耦合度增加程序的健壮性。</li>
+<li>线程池只能放进实现 <code>Runnable</code> 或 <code>Callable</code> 的类线程，而不能直接放进 <code>Thread</code> 的子类。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>在 Java 中，每执行一个类的时候都会启动一个 JVM，每个 JVM 都会在操作系统中启动一个进程。因此，每次程序运行至少要启动两个线程——<code>main</code> 线程以及垃圾收集进程。</p>
+</blockquote>
+<h3 id="5-通过匿名内部类实现线程的创建"><a href="#5-通过匿名内部类实现线程的创建" class="headerlink" title="5. 通过匿名内部类实现线程的创建"></a>5. 通过匿名内部类实现线程的创建</h3><ul>
+<li>使用线程的<strong>匿名内部类</strong>的方式，可以方便地实现每个线程执行不同的线程任务操作。</li>
+<li>如下面的例子通过实现 <code>Runnable</code> 接口的匿名内部类来重写 <code>run</code> 方法：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		Runnable r = new Runnable(){
+			public void run(){
+				for(int i = 0; i &lt; 10; i++)
+					System.out.println(Thread.currentThread().getName() + "--" + i);
+			}
+		};
+		new Thread(r).start();
+		for(int i = 0; i &lt; 10; i++)
+			System.out.println("小明--" + i);
+		//上面的两个语句与前一个创建线程的示例中的代码效果相同。
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-二-线程安全"><a href="#✅-二-线程安全" class="headerlink" title="✅ [二] 线程安全"></a>✅ [二] 线程安全</h2><h3 id="1-线程安全概述"><a href="#1-线程安全概述" class="headerlink" title="1. 线程安全概述"></a>1. 线程安全概述</h3><ul>
+<li>当多个线程的程序的运行结果与单线程运行的结果一样、各个变量的值也与预期一致，此时我们说程序是<strong>线程安全</strong>的。</li>
+<li>下面的代码演示了线程安全可能出现的问题：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TicketSeller implements Runnable{
+	private int ticketNum = 100;
+	
+	@Override
+	public void run(){
+		while(true){
+		//假设窗口永远开启
+			if(ticketNum &gt; 0){
+				try{
+					//卖票操作省略
+					Thread.sleep(100);
+					//模拟出票时间
+				}catch(InterruptedException e){
+					e.printStackTrace();
+				}
+				String name = Thread.currentThread().getName();
+				System.out.println(name + "正在出售" + ticketNum + "号票。");
+			}
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		TicketSeller ts = new TicketSeller();
+		Thread t1 = new Thread(ts, "1号窗口");
+		Thread t2 = new Thread(ts, "2号窗口");
+		Thread t3 = new Thread(ts, "3号窗口");
+		
+		t1.start();
+		t2.start();
+		t3.start();
+	}
+}
+/*
+部分运行结果：
+1号窗口正在出售5号票。
+2号窗口正在出售5号票。
+3号窗口正在出售4号票。
+2号窗口正在出售3号票。
+1号窗口正在出售2号票。
+1号窗口正在出售1号票。
+3号窗口正在出售-1号票。
+2号窗口正在出售0号票。
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>不难看出，上述程序出现了错误，包括一张票被重复出售、票售完后依然继续售票等。这种几个线程的实时数据不同步的问题，导致线程安全被破坏。</li>
+</ul>
+<h3 id="2-线程同步"><a href="#2-线程同步" class="headerlink" title="2. 线程同步"></a>2. 线程同步</h3><ul>
+<li>线程安全问题通常由全局变量与静态变量引起，尤其是当多个线程同时执行<strong>写入</strong>操作的时候，若不考虑线程同步，就容易引发线程安全问题。</li>
+<li><strong>线程同步</strong>机制（<strong>synchronized</strong>）控制各个线程的<em>写入</em>操作不同时进行，保证了数据的同步性，从而消除了线程不安全的隐患。</li>
+<li>线程同步的方式主要有以下三种：同步代码块、同步方法，以及锁机制。下面逐一介绍。</li>
+</ul>
+<h3 id="3-同步代码块"><a href="#3-同步代码块" class="headerlink" title="3. 同步代码块"></a>3. 同步代码块</h3><ul>
+<li><strong>同步代码块</strong>是指区块资源只能对其实行<strong>互斥访问</strong>的代码块。</li>
+<li><strong>同步锁</strong> 只是一个概念，可以想象为在对象上标记了一把锁。同步锁对象可以为任意类型，但多个线程对象要使用同一把锁。</li>
+<li>使用 <strong><em><code>synchronized</code></em></strong> 关键字可以创建同步代码块，如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">synchronized(同步锁){
+	//需要互斥访问的代码块
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>任何时候，最多允许一个线程拥有同步锁，拿到锁的线程才能访问代码块中的内容。</p>
+</blockquote>
+<ul>
+<li>下面是运用同步代码块解决售票问题的示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TicketSeller implements Runnable{
+	private int ticketNum = 100;
+	Object lock = new Object();
+	
+	@Override
+	public void run(){
+		while(true){
+		//假设窗口永远开启
+			synchronized(lock){
+				if(ticketNum &gt; 0){
+					try{
+						//卖票操作省略
+						Thread.sleep(100);
+						//模拟出票时间
+					}catch(InterruptedException e){
+						e.printStackTrace();
+					}
+					String name = Thread.currentThread().getName();
+					System.out.println(name + "正在出售" + ticketNum + "号票。");
+				}
+			}
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>可见在加入同步代码块之后，线程的安全问题解决了。</p>
+</blockquote>
+<h3 id="4-同步方法"><a href="#4-同步方法" class="headerlink" title="4. 同步方法"></a>4. 同步方法</h3><ul>
+<li>与同步代码块类似，我们可以定义<strong>同步方法</strong>来该为方法添加<em>互斥访问</em>特性。</li>
+<li>使用 <code>synchronized</code> 修饰方法即可定义同步方法，如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public synchronized void methodName(){
+	//方法体
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>同步代码块需要同步锁，而同步方法不需要，因为同步的<em>非静态</em>方法会自动使用 <code>this</code> 作为同步锁，<em>静态</em>方法则会使用方法所属类的字节码对象（每个类都有的名为 <code>class</code> 的静态成员）作为同步锁。 </li>
+</ul>
+<blockquote>
+<p>如果用同步方法来解决上述售票问题，只需定义一个同步方法，将之前 <code>while(true)</code> 中的内容全部装到它的方法体内，再调用这个同步方法即可。</p>
+</blockquote>
+<h3 id="5-Lock-锁"><a href="#5-Lock-锁" class="headerlink" title="5. Lock 锁"></a>5. Lock 锁</h3><ul>
+<li><strong><em><code>java.util.concurrent.locks.Lock</code></em></strong> 机制提供了比同步代码块、同步方法更为广泛的锁定操作。它更能体现高级语言面向对象的特点。</li>
+<li><code>Lock</code> 锁也称同步锁，加锁与释放锁变为两个方法，分别是 <code>public void lock()</code> 和 <code>public void unlock()</code>，使用示例如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TicketSeller implements Runnable{
+	private int ticketNum = 100;
+	Lock lock = new ReentrantLock();
+	
+	@Override
+	public void run(){
+		while(true){
+		//假设窗口永远开启
+			lock.lock();
+			if(ticketNum &gt; 0){
+				try{
+					//卖票操作省略
+					Thread.sleep(100);
+					//模拟出票时间
+				}catch(InterruptedException e){
+					e.printStackTrace();
+				}
+				String name = Thread.currentThread().getName();
+				System.out.println(name + "正在出售" + ticketNum + "号票。");
+			}
+			lock.unlock();
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-三-线程状态"><a href="#✅-三-线程状态" class="headerlink" title="✅ [三] 线程状态"></a>✅ [三] 线程状态</h2><h3 id="1-线程状态概述"><a href="#1-线程状态概述" class="headerlink" title="1. 线程状态概述"></a>1. 线程状态概述</h3><ul>
+<li>当线程创建并启动以后，它并非一启动就执行，也不是一旦执行就不停止。实际上，在线程的生命周期中有下面六种状态，由 <code>java.lang.Thread.State</code> 这个枚举给出：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">线程状态（枚举值）</th>
+<th align="center">进入状态的条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>NEW</code></td>
+<td align="center">线程刚被创建，但并未启动。</td>
+</tr>
+<tr>
+<td align="center"><code>RUNNABLE</code></td>
+<td align="center">线程启动，可能正在 JVM 中运行也可能不在运行。</td>
+</tr>
+<tr>
+<td align="center"><code>BLOCKED</code></td>
+<td align="center">线程试图获取对象锁但对象锁被其他线程持有。</td>
+</tr>
+<tr>
+<td align="center"><code>WAITING</code></td>
+<td align="center">线程开始等待另一个线程执行唤醒动作。</td>
+</tr>
+<tr>
+<td align="center"><code>TIMED_WAITING</code></td>
+<td align="center">线程开始等待另一个线程执行唤醒动作，同时开始计时。</td>
+</tr>
+<tr>
+<td align="center"><code>TERMINATED</code></td>
+<td align="center"><code>run</code> 方法正常退出或被异常终止。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>我们现阶段并不需要研究几种状态的实现原理，但要理解几个状态之间的区别。接下来对各种状态进行逐一的介绍。</p>
+</blockquote>
+<h3 id="2-Timed-Waiting-计时等待"><a href="#2-Timed-Waiting-计时等待" class="headerlink" title="2. Timed Waiting 计时等待"></a>2. Timed Waiting 计时等待</h3><ul>
+<li><strong>Timed Waiting</strong> 状态在 API 中被描述为：一个正在限时等待另一个线程执行唤醒动作的线程处于这一状态，实际上就是指一种休眠待唤醒的状态。</li>
+<li>使用 <strong><em><code>sleep</code></em></strong> 方法可以让线程对象进入 <em>Timed Waiting</em> 状态，例如：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class MyThread extends Thread{
+	@Override
+	public void run(){
+		for(int i = 1; i &lt;= 100; i++){
+			System.out.print(i + "--");
+			try{
+				Thread.sleep(10);
+				System.out.println("线程休眠 0.01 秒...");
+			}catch(InterruptedException e){
+				e.printStackTrace();
+			}
+			if(i % 10 == 0)
+				System.out.println("------------");
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		new MyThread().start();
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>关于 <code>sleep</code> 方法的使用还需注意以下几点：<ul>
+<li>单独的线程或者多个线程都可以调用 <code>sleep</code> 方法。</li>
+<li>为了让其他线程有机会执行，可以将 <code>Thread.sleep(millis);</code> 语句置于线程对象的 <code>run</code> 方法之内，这样就能让它在执行过程中进入睡眠。</li>
+<li><code>sleep</code> 方法与锁无关，线程睡眠到达指定时间会自动苏醒并返回到 <em>Runnable</em> 状态。</li>
+<li>线程苏醒后，不一定会马上执行，因为其他线程可能正在执行。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-Blocked-锁阻塞"><a href="#3-Blocked-锁阻塞" class="headerlink" title="3. Blocked 锁阻塞"></a>3. Blocked 锁阻塞</h3><ul>
+<li><strong>Blocked</strong> 状态在 API 中被描述为：一个正在阻塞等待一个监视器锁的线程处于这一状态。即，如果多个线程使用同一个锁，那么 <em>Blocked</em> 状态指未取得锁，因而无法进入执行的一种状态。</li>
+<li><em>Runnable</em>, <em>Time Waiting</em> 状态，以及接下来介绍的 <em>Waiting</em> 状态都可以在某种情况之下进入 <em>Blocked</em> 状态。</li>
+</ul>
+<h3 id="4-Waiting-无限等待"><a href="#4-Waiting-无限等待" class="headerlink" title="4. Waiting 无限等待"></a>4. Waiting 无限等待</h3><ul>
+<li><strong>Waiting</strong> 状态在 API 中被描述为：一个正在无限期等待另一个线程执行唤醒动作的线程处于这一状态。它与 <em>Time Waiting</em> 的区别就在于等待的期限。</li>
+<li>下面是出现这种状态的代码示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static Object lock = new Object();
+
+	public static void main(String[] args){
+		new Thread(new Runnable(){
+			@Override
+			public void run(){
+				while(true){
+					synchronized(lock){
+						try{
+							System.out.println(Thread.currentThread().getName()
+							+ "获取到锁对象，调用 wait 方法，进入 Waiting 状态，释放锁对象。");
+							//lock.wait(3000);			//计时 3 秒后苏醒
+							lock.wait();				//无限等待
+						}catch(InterruptedException e){
+							e.printStackTrace();
+						}
+						System.out.println(Thread.currentThread().getName()
+						+ "从 Waiting 状态醒来，获取到锁对象，继续执行。");
+					}
+				}
+			}
+		}, "等待线程").start();
+		
+		new Thread(new Runnable(){
+			@Override
+			public void run(){
+				while(true){
+					try{
+						System.out.println(Thread.currentThread().getName()
+						+ "等待 3 秒钟。");
+						Thread.sleep(3000);
+					}catch(InterruptedException e){
+						e.printStackTrace();
+					}
+					synchronized(lock){
+						System.out.println(Thread.currentThread().getName()
+						+ "获取到锁对象，调用 notify 方法，释放锁对象。");
+						lock.notify();
+					}
+				}
+			}
+		}, "唤醒线程").start();
+	}
+}
+/*
+运行结果：
+等待线程获取到锁对象，调用 wait 方法，进入 Waiting 状态，释放锁对象。
+唤醒线程等待 3 秒钟。
+唤醒线程获取到锁对象，调用 notify 方法，释放锁对象。
+等待线程从 Waiting 状态醒来，获取到锁对象，继续执行。
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-补充知识点"><a href="#5-补充知识点" class="headerlink" title="5. 补充知识点"></a>5. 补充知识点</h3><ul>
+<li>关于各种线程状态，作如下总结：<ul>
+<li><em>Runnable</em> 状态和 <em>Blocked</em> 状态之间切换的条件很简单，即线程是否获取到锁对象。</li>
+<li><em>Runnable</em> 状态的线程调用 <strong><em><code>wait</code></em></strong> 方法后，进入 <em>Waiting</em> 状态，而 <em>Waiting</em> 状态的线程需要其他线程调用 <strong><em><code>notify</code></em></strong> 方法才能获取锁对象并回到 <em>Runnable</em> 状态（若仍未获取锁对象，则进入 <em>Blocked</em> 状态）。</li>
+<li><em>Runnable</em> 状态的线程调用含参数的 <code>wait</code> 方法后，进入 <em>Timed Waiting</em> 状态，需要其他线程调用 <code>notify</code> 方法或者计时结束方可苏醒，再根据是否获取锁对象进入 <em>Runnable</em> 或 <em>Blocked</em> 状态（<code>sleep</code> 方法也可使线程进入 <em>Timed Waiting</em> 状态，并且与锁无关，计时结束时必然回到 <em>Runnable</em>）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="Day07：等待-amp-唤醒案例、线程池、Lambda-表达式"><a href="#Day07：等待-amp-唤醒案例、线程池、Lambda-表达式" class="headerlink" title="Day07：等待&amp;唤醒案例、线程池、Lambda 表达式"></a>Day07：等待&amp;唤醒案例、线程池、Lambda 表达式</h1><hr>
+<h2 id="✅-一-等待-amp-唤醒机制"><a href="#✅-一-等待-amp-唤醒机制" class="headerlink" title="✅ [一] 等待&amp;唤醒机制"></a>✅ [一] 等待&amp;唤醒机制</h2><h3 id="1-线程间通信"><a href="#1-线程间通信" class="headerlink" title="1. 线程间通信"></a>1. 线程间通信</h3><ul>
+<li>多个线程常常要处理同一个资源，但处理的动作即各线程的任务并不相同。这样就有了<strong>线程间通信</strong>的产生。线程间通信可以让并发执行的线程之间协调通信，规律执行，从而提高效率。</li>
+<li>为了达到这种协调，使各个线程有效利用资源的手段就是等待&amp;唤醒机制。</li>
+</ul>
+<h3 id="2-等待-amp-唤醒机制"><a href="#2-等待-amp-唤醒机制" class="headerlink" title="2. 等待&amp;唤醒机制"></a>2. 等待&amp;唤醒机制</h3><ul>
+<li><strong>等待&amp;唤醒机制</strong>是线程间的<strong>协作</strong>机制。虽然线程间存在竞争，但也会协作完成某些任务。当一个线程完成了规定的操作，就会进入等待（<em>Waiting</em>）状态，当其他线程执行完它们的指定代码后，再将其唤醒（<code>notify</code>），这就是等待与唤醒。当有多个线程同时等待时，如有需要，可以用 <code>notifyAll</code> 方法来唤醒所有的等待线程。</li>
+<li>线程在调用 <code>wait</code> 方法后，会进入 <em>wait set</em>，不继续占用 CPU 资源，直到接受到 <code>notify</code> 方法的唤醒，再重新进入调度队列（<em>ready queue</em>）（若无法获取到锁对象，线程在被唤醒后又进入 <em>entry set</em>，变为 <em>Blocked</em> 状态）。</li>
+<li>关于 <code>wait</code> 和 <code>notify</code> 方法，还有如下细节需要注意：</li>
+<li>如果要唤醒一个线程，需要令两个方法的调用者（即锁对象）为同一对象。</li>
+<li>这两个方法都可以在 <code>Object</code> 类中找到，所以锁对象可以是任何类型。</li>
+<li>这两个方法必须在<em>同步代码块</em>或者<em>同步方法</em>中使用。</li>
+</ul>
+<h3 id="3-生产者与消费者问题"><a href="#3-生产者与消费者问题" class="headerlink" title="3. 生产者与消费者问题"></a>3. 生产者与消费者问题</h3><ul>
+<li>接下来，通过对一个生产者与消费者的问题的分析来进一步说明等待&amp;唤醒机制：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class Phone{
+	String name;
+	boolean sold = true;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class Customer extends Thread{
+	private Phone phone;
+
+	public Customer(){}
+
+	public Customer(String name, Phone phone){
+		super(name);
+		this.phone = phone;
+	}
+
+	@Override
+	public void run(){
+		while(true){
+			synchronized(phone){
+				if(phone.sold == true){
+					try{
+						phone.wait();
+					}catch(InterruptedException e){
+						e.printStackTrace();
+					}
+				}
+				System.out.println("顾客正在买" + phone.name + "手机。");
+				phone.sold = true;
+				phone.notify();
+			}
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class Company extends Thread{
+	private Phone phone;
+
+	public Company(){}
+
+	public Company(String name, Phone phone){
+		super(name);
+		this.phone = phone;
+	}
+
+	@Override
+	public void run(){
+		int count = 0;
+		while(true){
+			synchronized(phone){
+				if(phone.sold == false){
+					try{
+						phone.wait();
+					}catch(InterruptedException e){
+						e.printStackTrace();
+					}
+				}
+				System.out.println("厂商开始造手机。");
+				switch(count % 3){
+					case 0:
+						phone.name = "Huawei Mate40 Pro";
+						break;
+					case 1:
+						phone.name = "iPhone 12 Pro";
+						break;
+					case 2:
+						phone.name = "Xiaomi 10 Ultra";
+						break;
+				}
+				count++;
+
+				phone.sold = false;
+				System.out.println(phone.name + "造出来了！");
+				System.out.println("快来买呀！");
+				phone.notify();
+			}
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		Phone phone = new Phone();
+
+		Customer cus = new Customer("王多鱼", phone);
+		Company com = new Company("三星", phone);
+
+		cus.start();
+		com.start();
+	}
+}
+/*
+部分运行结果：
+厂商开始造手机。
+Huawei Mate40 Pro造出来了！
+快来买呀！
+顾客正在买Huawei Mate40 Pro手机。
+厂商开始造手机。
+iPhone 12 Pro造出来了！
+快来买呀！
+顾客正在买iPhone 12 Pro手机。
+厂商开始造手机。
+Xiaomi 10 Ultra造出来了！
+快来买呀！
+顾客正在买Xiaomi 10 Ultra手机。
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-二-线程池"><a href="#✅-二-线程池" class="headerlink" title="✅ [二] 线程池"></a>✅ [二] 线程池</h2><h3 id="1-线程池概述"><a href="#1-线程池概述" class="headerlink" title="1. 线程池概述"></a>1. 线程池概述</h3><ul>
+<li>在之前，我们每有一个任务就需要创建一个线程。而当并发线程的数量很大时，频繁地创建与销毁线程需要大量时间，从而降低系统效率，线程池的作用就是实现线程的复用，从而解决了这一问题。</li>
+<li><strong>线程池</strong>（<strong>Thread Pool</strong>）是容纳多个线程的容器，其中的线程可以反复使用，省去了频繁创建线程对象的操作，节约了内存资源并提升了响应速度。</li>
+<li>线程池的工作线线程数目可以灵活调整，优化了线程的可管理性。</li>
+</ul>
+<h3 id="2-线程池的使用"><a href="#2-线程池的使用" class="headerlink" title="2. 线程池的使用"></a>2. 线程池的使用</h3><ul>
+<li><strong><em><code>java.util.concurrent.Executor</code></em></strong> 是所有线程池的根接口，但 <code>Executor</code> 并不是线程池，它只是执行线程的工具。真正的线程池接口是 <strong><em><code>java.util.concurrent.ExecutorService</code></em></strong>。</li>
+<li>配置一个线程池较为复杂，但 Java 提供了 <strong><em><code>java.util.concurrent.Executors</code></em></strong> 线程工厂类来帮助我们生成线程池，其中两个常用的方法如下：<ul>
+<li><code>public static ExecutorService newFixedThreadPool(int nThreads)</code>：根据指定最大线程数量，生成一个线程池对象。</li>
+<li><code>public Future&lt;?&gt; submit(Runnable task)</code>：获取线程池中的某一个线程对象并执行，其中 <code>Future&lt;T&gt;</code> 接口用来记录线程任务执行完毕产生的结果。</li>
+</ul>
+</li>
+<li>要使用线程池中的线程对象，需要进行以下步骤：<ol>
+<li>创建线程池对象；</li>
+<li>创建 <code>Runnable</code> 接口的子类对象（规定任务）；</li>
+<li>提交该对象（执行任务）；</li>
+<li>关闭线程池（一般不需要）。</li>
+</ol>
+</li>
+<li>下面是利用线程池的简单示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class MyRunnable implements Runnable{
+	@Override
+	public void run(){
+		System.out.println("我要一个教练。");
+		try{
+			Thread.sleep(2000);
+		}catch(InterruptedException e){
+			e.printStackTrace();
+		}
+		System.out.println("教练" + Thread.currentThread().getName() + "来了。");
+		System.out.println("教练教我打游戏，教完后教练回家吃饭去了。");
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		ExecutorService service = Executors.newFixedThreadPool(2);
+		MyRunnable mr = new MyRunnable();
+
+		service.submit(mr);
+		service.submit(mr);
+		service.submit(mr);
+
+		service.shutdown();
+	}
+}
+/*
+运行结果：
+我要一个教练。
+我要一个教练。
+教练pool-1-thread-2来了。
+教练教我打游戏，教完后教练回家吃饭去了。
+教练pool-1-thread-1来了。
+教练教我打游戏，教完后教练回家吃饭去了。
+我要一个教练。
+教练pool-1-thread-2来了。
+教练教我打游戏，教完后教练回家吃饭去了。
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-三-Lambda-表达式"><a href="#✅-三-Lambda-表达式" class="headerlink" title="✅ [三] Lambda 表达式"></a>✅ [三] Lambda 表达式</h2><h3 id="1-函数式编程思想概述"><a href="#1-函数式编程思想概述" class="headerlink" title="1. 函数式编程思想概述"></a>1. 函数式编程思想概述</h3><ul>
+<li>在面向对象的语言中，<em>面向对象</em>被过度强调了，实际上在很多情况下，我们并不强调对象与形式，而只需要结果，这时就可以采用<strong>函数式编程思想</strong>：<ul>
+<li>面向对象思想：要完成一个任务，就必须创建能够完成任务的对象，利用对象完成。</li>
+<li>函数式编程思想：要完成一个任务，只需找到能获得<strong>结果</strong>的方式，<strong>过程</strong>并不重要。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-冗余代码案例与思想转换"><a href="#2-冗余代码案例与思想转换" class="headerlink" title="2. 冗余代码案例与思想转换"></a>2. 冗余代码案例与思想转换</h3><ul>
+<li>下面的代码演示了面向对象编程在某些情境下的冗余性：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		Runnable task = new Runnable(){
+			@Override
+			public void run(){
+				System.out.println("Task runs.")
+			}
+		};
+		new Thread(task).start();
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>即便上述代码使用了匿名内部类来快速产生一个 <code>Runnable</code> 子类对象，再新建线程对象并执行，但线程对象真正需要的其实只是 <code>run</code> 方法的<strong>方法体</strong>。</li>
+<li>如果运用函数式编程思想，我们可以将代码优化为以下语句：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		new Thread(() -&gt; System.out.println("Task runs.")).start();
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>这样的语法就是 Lambda 表达式，它能够将<em>创建接口子类对象再对抽象方法覆盖重写</em>这一系列繁琐的步骤简化为一次“赋值”。</li>
+</ul>
+<h3 id="3-Lambda-表达式的标准格式"><a href="#3-Lambda-表达式的标准格式" class="headerlink" title="3. Lambda 表达式的标准格式"></a>3. Lambda 表达式的标准格式</h3><ul>
+<li>Lambda 表达式由三个部分组成：<strong>参数</strong>、<strong>箭头</strong> <strong><code>-&gt;</code></strong> 和<strong>代码</strong>，它的标准格式为：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">(参数类型 参数名称)-&gt;{
+	//代码语句
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>下面是使用的示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public interface Chef{
+	void cook();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		callChef(() -&gt; System.out.println("菜已经做好。"));
+	}
+
+	private static void callChef(Chef chef){
+		chef.cook();
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-Lambda-省略格式"><a href="#5-Lambda-省略格式" class="headerlink" title="5. Lambda 省略格式"></a>5. Lambda 省略格式</h3><ul>
+<li>Lambda 表达式还有省略格式，规则如下：<ul>
+<li>小括号内的参数<strong>类型可以省略</strong>。</li>
+<li>如果小括号内<strong>恰有一个参数</strong>，可以省略小括号。</li>
+<li>如果大括号内<strong>恰有一条语句</strong>，可以同时省略大括号、<code>return</code> 以及 <code>;</code>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-Lambda-表达式的使用注意事项"><a href="#6-Lambda-表达式的使用注意事项" class="headerlink" title="6. Lambda 表达式的使用注意事项"></a>6. Lambda 表达式的使用注意事项</h3><ul>
+<li>虽然 Lambda 既简洁又方便，但使用时需要注意以下细节：<ul>
+<li>Lambda 表达式本身要被当作一个<strong>接口</strong>，因此只有在能够使用<strong>接口</strong>的地方才能使用 Lambda 表达式。</li>
+<li>Lambda 所代替的接口中<strong>必须有且仅有一个抽象方法</strong>。</li>
+<li>Lambda 所代替的接口类型<strong>必须能被推断</strong>，否则无法接收。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>可以被 Lambda 表达式代替为一个子类对象的接口被称为<strong>函数式接口</strong>。</p>
+</blockquote>
+<hr>
+<hr>
+<h1 id="Day08：File-类、递归"><a href="#Day08：File-类、递归" class="headerlink" title="Day08：File 类、递归"></a>Day08：File 类、递归</h1><hr>
+<h2 id="✅-一-File-类"><a href="#✅-一-File-类" class="headerlink" title="✅ [一] File 类"></a>✅ [一] File 类</h2><h3 id="1-File-类概述"><a href="#1-File-类概述" class="headerlink" title="1. File 类概述"></a>1. File 类概述</h3><ul>
+<li><strong><em><code>java.io.File</code></em></strong> 类是<strong>文件名</strong>和<strong>目录路径名</strong>的抽象标识，主要用于文件和目录的创建、查找、删除等操作。</li>
+<li>一个 <code>File</code> 对象代表硬盘中实际存在的一个文件或者目录，但是无论路径下是否真的存在对应的文件或者目录，<code>File</code> 对象都可以正常创建。</li>
+</ul>
+<h3 id="2-常用方法-3"><a href="#2-常用方法-3" class="headerlink" title="2. 常用方法"></a>2. 常用方法</h3><ul>
+<li><code>File</code> 类的构造方法有以下几种：<ul>
+<li><code>public File(String pathname)</code>：通过给定的路径名，创建新的抽象路径名对象。</li>
+<li><code>public File(String parent, String child)</code>：通过父路径名与子路径名，创建新的抽象路径名对象。</li>
+<li><code>public File(File parent, String child)</code>：通过父抽象路径名和字路径名，创建新的抽象路径名对象。</li>
+</ul>
+</li>
+<li><code>File</code> 类的其他常用成员方法有：<ul>
+<li><code>public String getAbsolutePath()</code>：返回当前 <code>File</code> 对象的绝对路径名字符串。</li>
+<li><code>public String getPath()</code>：返回当前 <code>File</code> 对象的路径名字符串。</li>
+<li><code>public String getName()</code>：返回当前 <code>File</code> 对象的文件或目录的名称。</li>
+<li><code>public long length()</code>：返回当前 <code>File</code> 文件表示的文件的长度。</li>
+<li><code>public boolean creatNewFile()</code>：当 <code>File</code> 表示的文件不存在时，创建一个新的空文件，成功则返回 <code>true</code>。</li>
+<li><code>public boolean delete()</code>：删除当前 <code>File</code> 表示的文件或目录，成功则返回 <code>true</code>。</li>
+<li><code>public boolean mkdir()</code>：创建由当前 <code>File</code> 表示的目录，成功则返回 <code>true</code>。</li>
+<li><code>public boolean mkdirs()</code>：创建由当前 <code>File</code> 表示的目录，以及任何必需但不存在的父目录，成功则返回 <code>true</code>。</li>
+<li><code>public String[] list()</code>：返回一个包含当前 <code>File</code> 表示目录下的所有子文件及目录名的字符串数组，若目录不存在则返回 <code>null</code>。</li>
+<li><code>public File[] listFiles()</code>：返回一个包含当前 <code>File</code> 表示目录下的所有子文件及目录名的 <code>File</code> 数组，若目录不存在则返回 <code>null</code>。</li>
+</ul>
+</li>
+<li>使用 <code>File</code> 类的示例代码如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		File f1 = new File("D:/ClasDocu/2020/高级语言程序设计/Advance.md");
+		System.out.println("文件绝对路径：" + f1.getAbsolutePath());
+		System.out.println("文件构造路径：" + f1.getPath());
+		System.out.println("文件名称：" + f1.getName());
+		System.out.println("文件长度：" + f1.length() + " Bytes");
+
+		File f2 = new File("aaa.txt");
+		System.out.println(f2.getName() + "是否存在：" + f2.exists());
+		System.out.println(f2.getName() + "是否成功创建：" + f2.createNewFile());
+		System.out.println(f2.getName() + "是否存在：" + f2.exists());
+		System.out.println(f2.getName() + "是否删除：" + f2.delete());
+
+		File f3 = new File("newDir\\newNewDir");
+		System.out.println(f3.getName() + "是否存在：" + f3.exists());
+		System.out.println(f3.getName() + "是否成功创建：" + f3.mkdir());
+		System.out.println(f3.getName() + "是否成功创建：" + f3.mkdirs());
+		System.out.println(f3.getName() + "是否存在：" + f3.exists());
+		System.out.println(f3.getName() + "是否删除：" + f2.delete());
+
+		File f = new File("D:/ClasDocu");
+		File[] files = f.listFiles();
+		for(File file : files){
+			System.out.println(file);
+		}
+	}
+}
+/*
+运行结果：
+文件绝对路径：D:\ClasDocu\2020\高级语言程序设计\Advance.md
+文件构造路径：D:\ClasDocu\2020\高级语言程序设计\Advance.md
+文件名称：Advance.md
+文件长度：75871 Bytes
+aaa.txt是否存在：false
+aaa.txt是否成功创建：true
+aaa.txt是否存在：true
+aaa.txt是否删除：true
+newNewDir是否存在：false
+newNewDir是否成功创建：false
+newNewDir是否成功创建：true
+newNewDir是否存在：true
+newNewDir是否删除：false
+D:\ClasDocu\2019
+D:\ClasDocu\2020
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-二-递归"><a href="#✅-二-递归" class="headerlink" title="✅ [二] 递归"></a>✅ [二] 递归</h2><h3 id="1-递归概述"><a href="#1-递归概述" class="headerlink" title="1. 递归概述"></a>1. 递归概述</h3><ul>
+<li><strong>递归</strong>指一个方法在方法体内对自身的调用。</li>
+<li>递归分为<strong>直接递归</strong>与<strong>间接递归</strong>。</li>
+<li>递归必须要有终止条件，否则会导致栈内存溢出。递归的次数不宜过多，否则会有占内存溢出的风险。</li>
+<li><strong>构造方法禁止递归</strong>。</li>
+</ul>
+<h3 id="2-简单递归示例"><a href="#2-简单递归示例" class="headerlink" title="2. 简单递归示例"></a>2. 简单递归示例</h3><blockquote>
+<p>略。</p>
+</blockquote>
+<hr>
+<h2 id="✅-三-文件搜索案例"><a href="#✅-三-文件搜索案例" class="headerlink" title="✅ [三] 文件搜索案例"></a>✅ [三] 文件搜索案例</h2><h3 id="1-文件搜索"><a href="#1-文件搜索" class="headerlink" title="1. 文件搜索"></a>1. 文件搜索</h3><blockquote>
+<p>略。</p>
+</blockquote>
+<h3 id="2-文件过滤器优化"><a href="#2-文件过滤器优化" class="headerlink" title="2. 文件过滤器优化"></a>2. 文件过滤器优化</h3><ul>
+<li><strong><em><code>java.io.FileFilter</code></em></strong> 接口是 <code>File</code> 对象的过滤器，该接口的子类实例可以作为 <code>File</code> 中 <code>File[] listFiles(FileFilter filter)</code> 的参数。</li>
+<li><code>FileFilter</code> 接口中只有一个方法：**<em><code>boolean accept(File pathname)</code>**</em>，若给定 <code>File</code> 对象包含在当前的 <code>File</code> 目录中，则返回 <code>true</code>。</li>
+<li>文件过滤器的使用主要有以下步骤：<ol>
+<li>要传递 <code>FileFilter</code> 接口的子类对象，可以采用匿名内部类或 Lambda 表达式。</li>
+<li>重写 <code>accept</code> 方法。</li>
+<li>为 <code>listFiles</code> 方法传递上述对象，对返回的数组进行遍历操作。</li>
+</ol>
+</li>
+<li>下面是文件过滤器的使用示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		File dir = new File("D:\\ClasDocu\\2020\\学校文件");
+		printDirDocuments(dir);
+	}
+
+	private static void printDirDocuments(File dir){
+		File[] files = dir.listFiles(f -&gt; f.getName().endsWith(".doc") || f.isDirectory());
+		for(File file : files){
+			if(file.isFile()){
+				System.out.println("文件名：" + file.getAbsolutePath());
+			}else{
+				printDirDocuments(file);
+			}
+		}
+	}
+}
+/*
+运行结果：
+文件名：D:\ClasDocu\2020\学校文件\2019-2020学年第二学期第二阶段选课方案（定）.doc
+文件名：D:\ClasDocu\2020\学校文件\关于2019-2020学年第二学期期末考试工作安排的通知.doc
+文件名：D:\ClasDocu\2020\学校文件\关于做好2019-2020学年第二学期普通本科生线上教学准备工作的通知-终.doc
+文件名：D:\ClasDocu\2020\学校文件\其他内容\2019-2020延迟开学期间体育课网络教学工作补充说明.doc
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>在用于初始化 <code>File</code> 对象的字符串中，目录间既可以用 <code>/</code> 隔开，也可以用 <code>\\</code>（转义反斜杠），而调用成员方法打印出来的路径的目录间则会用 <code>\</code> 隔开。</p>
+</blockquote>
+<hr>
+<hr>
+<h1 id="Day09：字节流、字符流"><a href="#Day09：字节流、字符流" class="headerlink" title="Day09：字节流、字符流"></a>Day09：字节流、字符流</h1><hr>
+<h2 id="✅-一-IO-流"><a href="#✅-一-IO-流" class="headerlink" title="✅ [一] IO 流"></a>✅ [一] IO 流</h2><h3 id="1-IO-概述"><a href="#1-IO-概述" class="headerlink" title="1. IO 概述"></a>1. IO 概述</h3><ul>
+<li>在我们使用计算机时，时刻都在与计算机进行数据的传输，这种数据的流动叫做 <strong>IO</strong>。根据流动的方向，流入内存的称为<strong>输入流 I</strong>（*<strong><code>input</code>*<strong>），流出内存的称为</strong>输出流 O** （*</strong><code>output</code>***）。</li>
+<li><strong><em><code>java.io</code></em></strong> 包专门负责 Java 中的 <em>I/O</em> 操作，其中输入也叫做<strong>读取</strong>数据（到内存），输出也叫作（从内存）<strong>写出</strong>数据。</li>
+</ul>
+<h3 id="2-流的类型"><a href="#2-流的类型" class="headerlink" title="2. 流的类型"></a>2. 流的类型</h3><ul>
+<li>流除了可以分为输入流与输出流外，还可以按照数据类型分为<strong>字节流</strong>与<strong>字符流</strong>，前者以字节为单位，后者以字符为单位。</li>
+<li>按照这两种分类方式，我们可以将流共分为四种类型，它们的根类分别是：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">输入流</th>
+<th align="center">输出流</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">字节流</td>
+<td align="center"><code>InputStream</code> 字节输入流</td>
+<td align="center"><code>OutputStream</code> 字节输出流</td>
+</tr>
+<tr>
+<td align="center">字符流</td>
+<td align="center"><code>Reader</code> 字符输入流</td>
+<td align="center"><code>Writer</code> 字符输出流</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="✅-二-字节流"><a href="#✅-二-字节流" class="headerlink" title="✅ [二] 字节流"></a>✅ [二] 字节流</h2><h3 id="1-OutputStream-类"><a href="#1-OutputStream-类" class="headerlink" title="1. OutputStream 类"></a>1. OutputStream 类</h3><ul>
+<li><strong><em><code>java.io.OutputStream</code></em></strong> 抽象类是所有表示<strong>字节输出流</strong>的类的超类，它定义了字节输出流的基本共性功能方法：<ul>
+<li><strong><em><code>public void close()</code></em></strong>：关闭当前输出流并释放相关联的所有系统资源。</li>
+<li><code>public void flush()</code>：刷新当前输出流并强制写出所有缓冲的输出字节。</li>
+<li><code>public void write(byte[] b)</code>：将字节数组中的字节读入当前输出流。</li>
+<li><code>public void write(byte[] b, int off, int len)</code>：将字节数组左移 <code>off</code> 位后，将前 <code>len</code> 位读入当前输出流。</li>
+<li><code>public abstract void write(int b)</code>：抽象方法，将 <code>int b</code> 的第一个字节读入当前输出流。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>任何流在完成流的操作时，都必须调用 <code>close</code> 方法释放系统资源。</p>
+</blockquote>
+<h3 id="2-FileOutputStream-类"><a href="#2-FileOutputStream-类" class="headerlink" title="2. FileOutputStream 类"></a>2. FileOutputStream 类</h3><ul>
+<li>抽象类 <code>OutputStream</code> 的子类很多，最简单的子类是 <strong><em><code>java.io.FileOutputStream</code></em></strong>，它是文件输出流，用于<strong>将数据写出到文件</strong>。</li>
+<li><code>FileOutputStream</code> 类的常用方法有：<ul>
+<li><code>public FileOutputStream(File file)</code>：根据指定的 <code>File</code> 对象新建文件输出流对象，若已有数据，则清空。</li>
+<li><code>public FileOutputStream(String name)</code>：以指定的名称向默认路径写出文件，再新建文件输出流对象，若已有重名文件，则清空该文件内容。</li>
+<li><code>public FileOutputStream(File file, boolean append)</code>：根据指定的 <code>File</code> 对象新建文件输出流对象，若已有重名文件，若 <code>append</code> 为 <code>true</code>，则追加数据，否则清空数据。</li>
+<li><code>public FileOutputStream(String name, boolean append)</code>：以指定的名称向默认路径写出文件，再新建文件输出流对象，若已有重名文件，若 <code>append</code> 为 <code>true</code>，则追加数据，否则清空数据。</li>
+<li><code>public void write(int b)</code>：重写的写出方法，每次通过当前文件输出流对象向目标文件写出 <code>int b</code> 的第一个字节数据。</li>
+<li><code>public void write(byte[] b)</code>：重写的写出方法，通过当前文件输出流对象向目标文件写出字节数组的全部数据。</li>
+</ul>
+</li>
+<li>这些方法的使用示例如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args) throws IOException{
+		FileOutputStream fos1 = new FileOutputStream("fos.txt");
+		fos1.write(97);
+		fos1.write(98);
+		fos1.write(99);
+		fos1.close();
+		//此时的 fox.txt：abc
+
+		FileOutputStream fos2 = new FileOutputStream("fos.txt");
+		fos2.write("abc".getBytes());
+		fos2.close();
+		//此时的 fox.txt：abc
+
+		FileOutputStream fos3 = new FileOutputStream("fos.txt", true);
+		fos3.write("\r\nabc".getBytes());
+		fos3.close();
+		//此时的 fox.txt：	abc
+		//					abc
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>换行符分为<em>回车</em>（<em>CR</em>，对应 <code>\n</code>）和<em>换行</em>（<em>LF</em>，对应 <code>\r</code>）。前者的作用是回到一行开头，后者作用是另起一行。</p>
+<p>在 Windows 系统中，回车键等于 <em>CR + LF</em>，而在 Unix 系统中，回车键仅有 <em>LF</em>。因此在使用 <code>write</code> 方法时，需要注意每个 <code>\r</code> 之后都要对应有一个 <code>\n</code> 与之匹配。而在 IDEA 的控制台程序中，如果打印的字符串里含有换行符，则打印的结果符合如下规则：</p>
+<ul>
+<li>字符串 <code>""</code> 内的 <code>\n</code> 和 <code>\r</code> 自动匹配并抵消，在靠后的那个换行符处添加换行标记（<code>\r\n</code>）。</li>
+<li>剩余换行符中，每个 <code>\r</code> 都会抹去所在行内容，每个 <code>\n</code> 依然会另起一行。</li>
+</ul>
+</blockquote>
+<h3 id="3-InputStream-类"><a href="#3-InputStream-类" class="headerlink" title="3. InputStream 类"></a>3. InputStream 类</h3><ul>
+<li><strong><em><code>java.io.InputStream</code></em></strong> 抽象类是所有表示<strong>字节输入流</strong>的类的超类，它定义了字节输入流的基本共性功能方法：<ul>
+<li><code>public void close()</code>：关闭当前输入流并释放相关联的所有系统资源。</li>
+<li><code>public int read(byte[] b)</code>：从输入流中读取一些字节，并将它们存储到字节数组 <code>b</code> 中，返回存储成功的字节的个数。</li>
+<li><code>public abstract int read()</code>：抽象方法，从输入流读取下一个字节。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-FileInputStream-类"><a href="#4-FileInputStream-类" class="headerlink" title="4. FileInputStream 类"></a>4. FileInputStream 类</h3><ul>
+<li><strong><em><code>java.io.FileInputStream</code></em></strong> 类是文件输入流，可以从<strong>文件中读取字节到内存</strong>，是 <code>InputStream</code> 最简单的子类。</li>
+<li><code>FileInputStream</code> 类的常用方法有：<ul>
+<li><code>public FileInputStream(File file)</code>：根据指定的 <code>File</code> 对象新建文件输入流对象。</li>
+<li><code>public FileInputStream(String name)</code>：根据指定的文件名，新建文件输入流对象。</li>
+<li><code>public int read()</code>：重写的读取方法，从当前文件输入流对象从目标文件读取下一个字节，提升为 <code>int</code> 类型并返回，若已到末尾，则返回 <code>-1</code>。</li>
+<li><code>public int read(byte[] b)</code>：重写的读取方法，通过当前文件输入流对象从目标文件读取字节数据，存储到 <code>byte[] b</code> 中，返回存储的字节的个数，若已到末尾，则返回 <code>-1</code>。</li>
+</ul>
+</li>
+<li>部分方法的使用示例如下：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args) throws IOException{
+		FileInputStream fis = new FileInputStream("D:\\YoPic\\2a78f9a02b87e524.jpg");
+		FileOutputStream fos = new FileOutputStream("test.jpg");
+
+		byte[] b = new byte[1024];
+		while(fis.read(b) != -1){
+			fos.write(b);
+		}
+		fos.close();
+		fis.close();
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>注意，这里因为是图片，所以就算多读一整个 1 kB 的数组也不影响显示，但建议使用 <code>while((int read = fis.read(b)) != -1){ fos.write(b, 0, read); }</code> 这样的写法。</p>
+<p>注意，如果要关闭多个流，按这些流<strong>创建得从晚到早</strong>的顺序逐一调用 <code>close</code> 方法。</p>
+</blockquote>
+<hr>
+<h2 id="✅-三-字符流"><a href="#✅-三-字符流" class="headerlink" title="✅ [三] 字符流"></a>✅ [三] 字符流</h2><h3 id="1-字符流概述"><a href="#1-字符流概述" class="headerlink" title="1. 字符流概述"></a>1. 字符流概述</h3><ul>
+<li>一个中文字符可能占用多个字节，因此在使用字节流读取或写出文本时，遇到中文字符很可能无法处理，这时可以使用 <strong>字符流</strong>，以字符为单位进行读写。</li>
+<li>Java 中的字符流<strong>专门用于处理文本文件</strong>。</li>
+</ul>
+<h3 id="2-Writer-类"><a href="#2-Writer-类" class="headerlink" title="2. Writer 类"></a>2. Writer 类</h3><ul>
+<li><strong><em><code>java.io.Writer</code></em></strong> 抽象类是所有表示<strong>字符输出流</strong>类的超类，它的作用是将指定字符<strong>从内存写出到目的地</strong>，它定义了字符输出流的基本共性功能方法：<ul>
+<li><code>public void close()</code>：关闭当前输出流并释放相关联的所有系统资源。</li>
+<li><code>public void flush()</code>：刷新当前输出流并强制写出所有缓冲的输出字符。</li>
+<li><code>public void write(int c)</code>：将 <code>int c</code> 的第一个字节的字符写出当前输出流。</li>
+<li><code>public void write(char[] cbuf)</code>：将字符数组中的字符写出当前输出流。</li>
+<li><code>public void write(String str)</code>：将字符串中的字符写出当前输出流。</li>
+<li><code>public void write(String str, int off, int len)</code>：将字符串中 <code>[off, off+len)</code> 索引区间的字符写出当前输出流。</li>
+<li><code>public abstract void write(char[] cbuf, int off, int len)</code>：将字符数组中 <code>[off, off+len)</code> 索引区间的字符写出当前输出流。</li>
+</ul>
+</li>
+<li><code>Writer</code> 类的一个子类 <code>OutputStreamWriter</code> 的一个子类 <strong><em><code>FileWriter</code></em></strong> 是一个简单的字符输出流类，也可以通过 <code>File</code> 或 <code>String</code> 对象进行构造，在此不展开介绍。</li>
+<li>需要注意的是，同 <code>FileOutputStream</code> 类不同，如果调用了 <code>write</code> 方法而不调用 <code>flush</code> 或 <code>close</code> 方法来<strong>刷新缓冲区</strong>，那么数据将不会写出到目标文件。但无论如何，当流对象不再使用时，一定要调用 <code>close</code> 方法释放资源。</li>
+<li>字符流的对象<strong>只能处理文本文件</strong>，切勿用于其他文件。</li>
+</ul>
+<h3 id="3-Reader-类"><a href="#3-Reader-类" class="headerlink" title="3. Reader 类"></a>3. Reader 类</h3><ul>
+<li><strong><em><code>java.io.Reader</code></em></strong> 抽象类是所有表示<strong>字符输入流</strong>类的超类，它的作用是<strong>从文本读取字符至内存</strong>，它定义了字符输入流的基本共性功能方法：<ul>
+<li><code>public void close()</code>：关闭当前输出流并释放相关联的所有系统资源。</li>
+<li><code>public int read(char[] cbuf)</code>：从输入流读取一些字符，并将它们存储到字符数组 <code>cbuf</code> 中，返回存储成功的字节的个数。</li>
+<li><code>public abstract int read()</code>：抽象方法，从输入流读取下一个字符，若已到末尾，返回 <code>-1</code>。</li>
+</ul>
+</li>
+<li><code>Reader</code> 类的一个子类 <code>InputStreamReader</code> 的一个子类 <strong><em><code>FileReader</code></em></strong> 是一个简单的字符输入流类，也可以通过 <code>File</code> 或 <code>String</code> 对象进行构造，在此不展开介绍。</li>
+</ul>
+<h3 id="4-IO-异常的处理"><a href="#4-IO-异常的处理" class="headerlink" title="4. IO 异常的处理"></a>4. IO 异常的处理</h3><ul>
+<li>在之前的内容里，我们处理异常采用的是 <code>try-catch-finally</code> 模式，其中 <code>finally</code> 代码块是为了让某些资源在程序异常终止时也能关闭。而 <em><code>try</code> with resource</em> 模式则可以更加简化，它的格式是在 <code>try</code> 和 <code>{</code> 之间加入一个参数列表，提供需要关闭的资源作为参数即可。</li>
+<li>下面是使用的简单示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args) throws IOException{
+		final FileReader reader = new FileReader("in.txt");
+		FileWriter writer = new FileWriter("out.txt");
+
+		try(reader; writer){
+			int b;
+			while((b = reader.read()) != -1){
+				writer.write(b);
+			}
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>该代码由于 JDK 版本原因，在我的 IDEA 上未能成功运行，所以无法保证其正确性。</p>
+</blockquote>
+<hr>
+<h2 id="✅-四-属性集"><a href="#✅-四-属性集" class="headerlink" title="✅ [四] 属性集"></a>✅ [四] 属性集</h2><h3 id="1-属性集概述"><a href="#1-属性集概述" class="headerlink" title="1. 属性集概述"></a>1. 属性集概述</h3><ul>
+<li><strong><em><code>java.util.Properties</code></em></strong> 类继承了 <code>Hashtable</code>，来表示一个持久的<strong>属性集</strong>（即一组持久的属性）。它使用键值结构存储数据，<em>键</em>与<em>值</em>都是 <code>String</code> 类型。</li>
+</ul>
+<h3 id="2-Properties-类"><a href="#2-Properties-类" class="headerlink" title="2. Properties 类"></a>2. Properties 类</h3><ul>
+<li><code>Properties</code> 类的常用方法如下：<ul>
+<li><code>public Properties()</code>：新建一个空的属性列表。</li>
+<li><code>public Object setProperty(String key, String value)</code>：保存一对属性。</li>
+<li><code>public String getProperty(String key)</code>：根据给定的<em>键</em>返回相应的属性<em>值</em>。</li>
+<li><code>public Set&lt;String&gt; stringPropertyNames()</code>：返回所有<em>键</em>的名称的 <code>Set</code> 集合。</li>
+<li><code>public void load(InputStream inStream)</code>：从字节输入流中读取键值对并保存。</li>
+</ul>
+</li>
+<li>下面是简单的使用示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args) throws IOException{
+		Properties ps = new Properties();
+
+		ps.setProperty("filename", "aaa.txt");
+		ps.setProperty("length", "209385038");
+		ps.setProperty("path", "D:\\aaa.txt");
+		//in.txt 文件内的内容为 Java=Nice
+		ps.load(new FileInputStream("in.txt"));
+
+		Set&lt;String&gt; strings = ps.stringPropertyNames();
+
+		System.out.println(ps);
+		System.out.println(strings);
+	}
+}
+/*
+运行结果：
+{Java=Nice, filename=aaa.txt, length=209385038, path=D:\aaa.txt}
+[Java, filename, length, path]
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>如果使用 <code>load</code> 方法，字符输入流的目标文本文件中的内容必须为键值对形式，可以用空格、等号或冒号来隔开<em>键</em>与<em>值</em>。</p>
+<p>不难看出，<code>setProperty</code> 方法从属性集的尾部加入键值对，而 <code>load</code> 方法则是从头部。</p>
+</blockquote>
+<hr>
+<hr>
+<h1 id="Day10：缓冲流、转换流、序列化流、打印流"><a href="#Day10：缓冲流、转换流、序列化流、打印流" class="headerlink" title="Day10：缓冲流、转换流、序列化流、打印流"></a>Day10：缓冲流、转换流、序列化流、打印流</h1><hr>
+<h2 id="✅-一-缓冲流"><a href="#✅-一-缓冲流" class="headerlink" title="✅ [一] 缓冲流"></a>✅ [一] 缓冲流</h2><h3 id="1-缓冲流概述"><a href="#1-缓冲流概述" class="headerlink" title="1. 缓冲流概述"></a>1. 缓冲流概述</h3><ul>
+<li><strong>缓冲流</strong>也叫高效流，它是对前面所学的 <code>FileOutputStream</code>、<code>FileInputStream</code>、<code>FileWriter</code>、<code>FileReader</code> 四个类的增强类，分别对应：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">流的类型</th>
+<th align="center">简单类</th>
+<th align="center">缓冲流类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">字节的输出</td>
+<td align="center"><code>FileOutputStream</code></td>
+<td align="center"><code>BufferedOutputStream</code></td>
+</tr>
+<tr>
+<td align="center">字节的输入</td>
+<td align="center"><code>FileInputStream</code></td>
+<td align="center"><code>BufferedInputStream</code></td>
+</tr>
+<tr>
+<td align="center">字符的输出</td>
+<td align="center"><code>FileWriter</code></td>
+<td align="center"><code>BufferedWriter</code></td>
+</tr>
+<tr>
+<td align="center">字符的输入</td>
+<td align="center"><code>FileReader</code></td>
+<td align="center"><code>BufferedReader</code></td>
+</tr>
+</tbody></table>
+<ul>
+<li>缓冲流的原理是为流对象内置一个<strong>缓冲区数组</strong>，通过对数组的读写减少 IO 的次数，从而提高读写的效率。</li>
+</ul>
+<h3 id="2-字节缓冲流"><a href="#2-字节缓冲流" class="headerlink" title="2. 字节缓冲流"></a>2. 字节缓冲流</h3><ul>
+<li><strong><em><code>BufferedInputStream</code></em></strong> 与 <strong><em><code>BufferedOutputStream</code></em></strong> 都是<strong>字节缓冲流</strong>，它们的构造方法分别以 <code>InputStream</code> 和 <code>OutputStream</code> 的对象作为参数。</li>
+<li>相比于普通字节流，字节缓冲流读写的步骤大同小异，但效率却是前者的很多倍。如果用两个 <code>long</code> 型整数来接收 <code>System.currentTimeMillis()</code> 的返回值，可以比较二者执行同一文件读取与写出所需的时间，此处不进行实际展示。</li>
+</ul>
+<h3 id="3-字符缓冲流"><a href="#3-字符缓冲流" class="headerlink" title="3. 字符缓冲流"></a>3. 字符缓冲流</h3><ul>
+<li><p><strong><em><code>BufferedReader</code></em></strong> 与 <strong><em><code>BufferedWriter</code></em></strong> 都是<strong>字符缓冲流</strong>，它们的构造方法分别以 <code>Reader</code> 和 <code>Writer</code> 的对象作为参数。</p>
+</li>
+<li><p>字符缓冲流的基本方法与普通字符流的方法基本一致，但还具备常用的特有方法：</p>
+<ul>
+<li>（<code>BufferedReader</code>）<code>public String readLine()</code>：读一行文字。</li>
+<li>（<code>BufferedWriter</code>）<code>public void newLine()</code>：写一行分隔符（默认为写一个空行）。</li>
+</ul>
+</li>
+<li><p>下面是一个运用字符缓冲流快速处理文本的例子：</p>
+</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+   public static void main(String[] args) throws IOException{
+	  HashMap&lt;String, String&gt; lineMap = new HashMap&lt;&gt;();
+
+	  BufferedReader reader = new BufferedReader(new FileReader("test.txt"));
+	  BufferedWriter writer = new BufferedWriter(new FileWriter("dest.txt"));
+
+	  String line = null;
+	  while((line = reader.readLine()) != null){
+		 String[] split = line.split("\\.");
+		 lineMap.put(split[0], split[1]);
+	  }
+	  reader.close();
+
+	  for(int i = 1; i &lt; lineMap.size(); i++){
+		 String key = String.valueOf(i);
+		 String value = lineMap.get(key);
+		 writer.write(key + "." + value);
+		 writer.newLine();
+	  }
+	  writer.close();
+   }
+}
+/*
+原文的格式是：
+3.侍中、侍郎郭攸之……
+8.愿陛下托臣以讨贼兴复之效……
+……
+这样的乱序文章，该程序运行后，生成的 dest.txt 文件里的段落变为了按序号排列。
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><code>split</code> 方法的参数是一个正则表达式字符串，而正则表达式中，<code>.</code> 代表任意单字，<code>\.</code> 才是一个小数点，而在 Java 语法中的字符串如果要出现 <code>\.</code>，就必须对前面的 <code>\</code> 进行转义，于是参数写成 <code>"\\."</code>。</p>
+</blockquote>
+<hr>
+<h2 id="✅-二-转换流"><a href="#✅-二-转换流" class="headerlink" title="✅ [二] 转换流"></a>✅ [二] 转换流</h2><h3 id="1-字符编码与字符集"><a href="#1-字符编码与字符集" class="headerlink" title="1. 字符编码与字符集"></a>1. 字符编码与字符集</h3><ul>
+<li>计算机以二进制形式存储信息，因此计算机与外界进行信息交换之前，必须要对字符进行转换。</li>
+<li><strong>编码</strong>指将字符按照某种规则转换成二进制形式存储到计算机中，相应地，<strong>解码</strong>指将计算机中的二进制数按照某种规则解析成字符。</li>
+<li>编码与解码有很多种规则，<strong>字符编码</strong>（<strong>Character Encoding</strong>）就是一套自然语言字符与二进制数之间的对应规则。若解码所使用的的字符编码与编码的不统一，就会导致乱码现象。</li>
+<li><strong>字符集</strong>（<strong>Charset</strong>）也叫编码表，它是指一套字符编码所支持的所有字符的集合，包括各国文字、数字、标点、特殊符号等。字符编码确定后，二进制数转换产生的字符随之确定，字符集也就相应地确定了。</li>
+<li>常见字符集/字符编码有：<ul>
+<li><em>ASCII</em>：基于拉丁字母的编码系统，使用 7 bits 表示一个字符，共有 128 个字符。ASCII 的扩展字符集使用 8 bits 表示一个字符，共有 256 个字符。</li>
+<li><em>ISO-8859-1</em>：拉丁码表，别名 Latin-1，用于显示欧洲使用的语言。该字符集使用单字节编码，兼容 ASCII。</li>
+<li><em>GB</em> 系列：<ul>
+<li><em>GB2312</em>：简体中文码表，使用 2 个字节保存字符，支持中文，根据二进制值是否大于 127，可以分为通俗的“全角”、“半角”字符。</li>
+<li><em>GBK</em>：最常用的中文码表，是 GB2312 的扩展，支持繁体中文、日韩汉字。</li>
+<li><em>GB18030</em>：最新的中文码表，每个字可以由至多 4 个字节组成，支持中国少数民族的汉字。</li>
+</ul>
+</li>
+<li><em>Unicode</em>：为表达任意语言的字符而设计的字符集，也称统一码、标准万国码。Unicode 使用至多 4 个字节来表示任何字符，有三种编码方案，其中 UTF-8 最为常用（另两种为 UTF-16 和 UTF-32）。<em>UTF-8</em> 编码是目前互联网中优先采用的编码方案，我们开发 Web 应用也使用 UTF-8 编码，它的规则如下：<ul>
+<li>基础 ASCII 码中的字符保持不变，使用 1 字节编码。</li>
+<li>拉丁文等字符，使用 2 字节编码。</li>
+<li>大部分常用字（包括中文）字符，使用 3 字节编码。</li>
+<li>其他极少使用的 Unicode 辅助字符，使用 4 字节编码。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-InputStreamReader-类"><a href="#2-InputStreamReader-类" class="headerlink" title="2. InputStreamReader 类"></a>2. InputStreamReader 类</h3><ul>
+<li>Windows 系统的文本文件默认使用 GBK 编码，但 IDEA 的 Java 项目默认使用 UTF-8 编码，因此在<strong>读取文本文件</strong>时，很可能引发<strong>乱码</strong>问题。</li>
+<li><strong><em><code>java.io.InputStreamReader</code></em></strong> 类是 <code>Reader</code> 的子类，它能够读取以<strong>字节</strong>存储的文本并自动<strong>解码为字符</strong>，且字符集可以指定。</li>
+<li><code>InputStreamReader</code> 的构造方法有两种：<ul>
+<li><code>InputStreamReader(InputStream in)</code>：新建一个使用默认字符集的字符输入流。</li>
+<li><code>InputStreamReader(InputStream in, String charsetName)</code>：新建一个使用指定字符集的字符输入流。</li>
+</ul>
+</li>
+<li>常用方法 <code>close</code>, <code>read</code> 等与 <code>Reader</code> 类似，可以参考前面的介绍。</li>
+<li>这样，用 <code>InputStreamReader</code> 类的对象读入内存的字符就不用受默认字符集的限制，此处不做演示。</li>
+</ul>
+<h3 id="3-OutputStreamWriter-类"><a href="#3-OutputStreamWriter-类" class="headerlink" title="3. OutputStreamWriter 类"></a>3. OutputStreamWriter 类</h3><ul>
+<li><strong><em><code>java.io.OutputStreamWriter</code></em></strong> 类是 <code>Writer</code> 的子类，它能够将给定的<strong>字符编码为字节</strong>并写出到文本文件，且字符集可以指定。</li>
+<li><code>OutputStreamWriter</code> 的构造方法有两种：<ul>
+<li><code>OutputStreamWriter(OutputStream out)</code>：新建一个使用默认字符集的字节输出流。</li>
+<li><code>OutputStreamWriter(OutputStream out, String charsetName)</code>：新建一个使用指定字符集的字节输出流。</li>
+</ul>
+</li>
+<li>常用方法 <code>close</code>, <code>write</code> 等与 <code>Writer</code> 类似，可以参考前面的介绍。</li>
+<li>这样，用 <code>OutputStreamWriter</code> 类的对象写出内存的字符就不用受默认字符集的限制。下面是同时使用两种转换流的简单代码示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args) throws IOException{
+		String src = "text_GBK.txt";
+		String dest = "text_UTF8.txt";
+
+		//InputStreamReader reader = new InputStreamReader(new FileInputStream(src), "UTF-8");
+		//引发乱码问题
+		InputStreamReader reader = new InputStreamReader(new FileInputStream(src), "GBK");
+		OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(dest), "UTF-8");
+
+		char[] cbuf = new char[1024];
+		int read;
+		while((read = reader.read(cbuf)) != -1){
+			writer.write(cbuf, 0, read);
+		}
+
+		writer.close();
+		reader.close();
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-三-序列化流"><a href="#✅-三-序列化流" class="headerlink" title="✅ [三] 序列化流"></a>✅ [三] 序列化流</h2><h3 id="1-序列化流概述"><a href="#1-序列化流概述" class="headerlink" title="1. 序列化流概述"></a>1. 序列化流概述</h3><ul>
+<li><strong>序列化</strong>是 Java 语言的一种机制，它指的是用<strong>字节序列</strong>来表示对象的过程。这样的字节序列包含了对象的<strong>数据</strong>、<strong>类型</strong>和<strong>存储的属性</strong>等信息。当字节序列从内存写出到文件后，我们就相当于<strong>持久保存</strong>了一个对象的信息。</li>
+<li>对应于序列化，<strong>反序列化</strong>则是指根据字节序列重构对象的过程。</li>
+</ul>
+<h3 id="2-ObjectOutputStream-类"><a href="#2-ObjectOutputStream-类" class="headerlink" title="2. ObjectOutputStream 类"></a>2. ObjectOutputStream 类</h3><ul>
+<li><strong><em><code>java.io.ObjectOutputStream</code></em></strong> 类是序列化流，可以将 Java 对象的原始数据类型写出到文件，实现对对象的持久存储。</li>
+<li>要对一个对象进行序列化操作，一般有以下几个步骤：<ol>
+<li>需要序列化的对象所属的类必须实现 <strong><em><code>java.io.Serializable</code></em></strong> 接口，否则将会抛出 <code>NotSerializableException</code> 异常。</li>
+<li>实现接口后，所有属性默认为可序列化状态，若某些属性不需要序列化，在对应的属性前加上 <strong><em><code>transient</code></em></strong> 修饰符来说明它是<strong>瞬态</strong>成员。</li>
+<li>新建序列化流对象，构造方法为 <code>public ObjectOutputStream(OutputStream out)</code>。</li>
+<li>序列化流调用 <code>public final void writeObject(Object obj)</code>，完成序列化操作。</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-ObjectInputStream-类"><a href="#3-ObjectInputStream-类" class="headerlink" title="3. ObjectInputStream 类"></a>3. ObjectInputStream 类</h3><ul>
+<li><strong><em><code>java.io.ObjectInputStream</code></em></strong> 类是反序列化流，可以读一个文本文件，进行反序列化，并重构一个对象。</li>
+<li>要对一个对象进行反序列化操作，一般有以下几个步骤：<ol>
+<li>新建反序列化流对象，构造方法为 <code>public ObjectInputStream(InputStream in)</code>。</li>
+<li>反序列化流调用 <code>public final Object readObject()</code>，完成反序列化操作。</li>
+</ol>
+</li>
+<li>如果要反序列化生成对象，那么必须要能找得到对应类的 <code>.class</code> 文件，否则将会抛出 <code>ClassNotFoundException</code> 异常。</li>
+<li>如果要反序列化生成对象，需要确保对应类的 <code>.class</code> 文件在序列化之后未被修改，否则将会抛出 <code>InvalidClassException</code> 异常，产生这个异常有可能是因为：<ul>
+<li>该类的序列版本号（对应 <code>Serializable</code> 接口的 <code>private static long serialVersionUID</code> 变量）与反序列化流读取到的类描述符的版本号不匹配。</li>
+<li>该类包含未知数据类型。</li>
+<li>该类没有可访问的无参数构造方法。</li>
+</ul>
+</li>
+<li>如果是第一种原因，那么修改对应类的 <code>serialVersionUID</code> 的值与字节序列文件中的版本号相符即可。</li>
+<li>下面是序列化与反序列化的简单代码示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class Person implements Serializable{
+	private String name;
+	private int age;
+
+	//此处省略构造函数、setter 和 getter
+
+	@Override
+	public String toString(){
+		return "Person{" + "name='" + name + '\'' + ", age=" + age + '}';
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args) throws IOException, ClassNotFoundException{
+		Person p1 = new Person("Bill", 19);
+		Person p2 = new Person("Nill", 20);
+		Person p3 = new Person("Mill", 21);
+
+		ArrayList&lt;Person&gt; list = new ArrayList&lt;&gt;();
+		Collections.addAll(list, p1, p2, p3);
+
+		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("list.txt"));
+		out.writeObject(list);
+
+		ObjectInputStream in = new ObjectInputStream(new FileInputStream("list.txt"));
+		ArrayList&lt;Person&gt; read = (ArrayList&lt;Person&gt;)in.readObject();
+
+		for(int i = 0; i &lt; list.size(); i++){
+			System.out.println(list.get(i));
+		}
+
+		in.close();
+		out.close();
+		new File("list.txt").delete();
+	}
+}
+/*
+运行结果：
+Person{name='Bill', age=19}
+Person{name='Nill', age=20}
+Person{name='Mill', age=21}
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>如果要序列化/反序列化多个对象，可以像上面一样，先将它们放入集合，再直接对集合进行操作。</p>
+<p>第 22 行，如果放在 20 行之前，则无法删除，因为流还未关闭。</p>
+</blockquote>
+<hr>
+<h2 id="✅-四-打印流"><a href="#✅-四-打印流" class="headerlink" title="✅ [四] 打印流"></a>✅ [四] 打印流</h2><h3 id="1-打印流概述"><a href="#1-打印流概述" class="headerlink" title="1. 打印流概述"></a>1. 打印流概述</h3><ul>
+<li>之前我们在控制台打印输出的操作都通过 <code>print</code> 及 <code>println</code> 方法完成，实际上，这两个方法都来自<strong>打印流</strong>类，该类能够方便地打印各种类型的数据。</li>
+</ul>
+<h3 id="2-PrintStream-类"><a href="#2-PrintStream-类" class="headerlink" title="2. PrintStream 类"></a>2. PrintStream 类</h3><ul>
+<li><strong><em><code>java.io.PrintStream</code></em></strong> 类就是打印流，打印流的方向是<strong>从内存写出</strong>。<code>PrintStream</code> 的构造方法 <code>public PrintStream(String fileName)</code> 能根据指定的文件名新建一个打印流。当有了打印流对象之后，就可以调用 <code>print</code>, <code>println</code> 方法进行打印输出。</li>
+<li>我们熟悉的 <code>System.out</code> 就是一个 <code>PrintStream</code> 类型的静态成员，它默认输出到控制台，通过调用 <code>System</code> 的 <code>public void setOut(PrintScream out)</code> 方法就可以改变流出的位置。</li>
+</ul>
+<hr>
+<hr>
+<h1 id="Day11：网络编程"><a href="#Day11：网络编程" class="headerlink" title="Day11：网络编程"></a>Day11：网络编程</h1><hr>
+<h2 id="✅-一-网络编程入门"><a href="#✅-一-网络编程入门" class="headerlink" title="✅ [一] 网络编程入门"></a>✅ [一] 网络编程入门</h2><h3 id="1-软件结构"><a href="#1-软件结构" class="headerlink" title="1. 软件结构"></a>1. 软件结构</h3><ul>
+<li>计算机上的软件多种多样，它们按照结构可以分为以下两种：<ul>
+<li><strong>C/S结构</strong>：全称为 Client/Server 结构，即客户端-服务器结构，直接连接数据库服务器的是客户端程序。常见软件有腾讯 QQ、网易云音乐等。</li>
+<li><strong>B/S结构</strong>：全称为 Browser/Server 结构，即浏览器-服务器结构，直接连接数据库服务器的是浏览器程序。常见软件有 Chrome、火狐等。</li>
+</ul>
+</li>
+<li>上面两种结构各有优势，但无论哪种架构，都离不开网络的支持。在一定协议的约束下，计算机通过<strong>网络</strong>与其他计算机间信息的发送接收，这样的数据交互过程就叫<strong>网络编程</strong>。</li>
+</ul>
+<h3 id="2-网络通信协议"><a href="#2-网络通信协议" class="headerlink" title="2. 网络通信协议"></a>2. 网络通信协议</h3><ul>
+<li><strong>网络通信协议</strong>是计算机要实现通信所必须遵守的规则，类似于车辆需要遵守的交通规则。网络通信协议对数据的传输格式、传输步骤、传输速率等都作了规定，通信双方只有遵守协议，才能完成数据交换。</li>
+<li><strong>TCP/IP</strong> 的全称是 Transmission Control Protocol/Internet Protocol，即传输控制协议/因特网互联协议，是 Internet 因特网最基本与最广泛的协议。它规定了计算机接入互联网的方式以及互联网中数据传输的一系列标准。它的内部又包含了一系列用于处理数据通信的协议，并采用了分层模型，每一层协议都能呼叫下一层提供的协议来完成某些要求。这些层<strong>从上到下</strong>可以分为：<ol>
+<li>应用层——HTTP、FTP 等协议；</li>
+<li>传输层——TCP、UDP；</li>
+<li>网络层——IP、ARP 等协议；</li>
+<li>物理层&amp;三数据链路层——由底层网络定义的协议。</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>要获取更多互联网协议的入门知识，请访问<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html">【阮一峰】互联网协议入门（一）</a>。</p>
+</blockquote>
+<h3 id="3-协议分类"><a href="#3-协议分类" class="headerlink" title="3. 协议分类"></a>3. 协议分类</h3><ul>
+<li>通信的协议相当复杂，但低层次的通信我们可以直接使用 JDK 中 <strong><em><code>java.net</code></em></strong> 包下的类与接口来完成简单网络程序的开发。</li>
+<li><code>java.net</code> 包中提供了两种常见网络协议的支持：<ul>
+<li>TCP 传输控制协议。TCP 是<strong>面向连接</strong>的通信协议，它的应用十分广泛，包括下载文件、浏览网页等。TCP 规定，在传输数据之前，要建立发送端与接收端端逻辑连接，以保证计算机间数据传输的可靠性。TCP 的重要部分是 <strong>三次握手</strong>，对应了客户端与服务器的三次交互：<ol>
+<li>第一次握手：客户端向服务器端发出连接请求，等待确认；</li>
+<li>第二次握手：服务器端收到请求后，向客户端发出响应；</li>
+<li>第三次握手：客户端再次向服务器端发送确认信息，确认连接。</li>
+</ol>
+</li>
+<li><strong>UDP</strong> 用户数据报协议（User Datagram Protocol）。UDP 是<strong>面向无连接</strong>的协议，应用在视频会议、QQ 聊天等场景。根据 UDP，传输数据不需要建立连接，只需将数据、数据源与目的地封装进数据包中就可直接发送，数据包的大小限制为 64 kB。UDP 无连接所以传输数据快，但容易丢失数据，是不可靠协议。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-网络编程三要素"><a href="#4-网络编程三要素" class="headerlink" title="4. 网络编程三要素"></a>4. 网络编程三要素</h3><ul>
+<li>网络编程有三大要素：协议、IP 地址和端口号。</li>
+<li><strong>协议</strong>在上面已经介绍过，不再赘述。</li>
+<li><strong>IP 地址</strong>的全称是 Internet Protocol Address，即互联网协议地址，有时也称 IP。IP地址用来给网络中的计算机设备做唯一的标识，类似于座机的电话号码。</li>
+<li>IP 地址分为几类：<ul>
+<li><em>IPv4</em> 是 32 位的二进制数，按照字节分开，表示为 <code>x.x.x.x</code> 的形式，如 <code>192.168.65.100</code>，其中每个数都应该是 0～255 范围内的整数。这样最多能产生 42 亿个不同的 IP 地址。</li>
+<li><em>IPv6</em> 是 128 位的二进制数，每 16 位一组，可分成 8 个 4 位十六进制数，如 <code>ABCD:EF01:2345:6789:ABCD:EF01:2345:6789</code>。它极大扩大了地址空间，解决了网络地址资源分配紧张的问题。</li>
+</ul>
+</li>
+<li>可以在命令行输入 <code>ipconfig</code> 查看计算机的 IP 地址，输入 <code>ping x.x.x.x</code> 来检查自己与目标 IP 地址是否在网络中能够连通，其中的 <code>x.x.x.x</code> 如果要使用本机 IP 地址，也可以用 <code>127.0.0.1</code> 或者 <code>localhost</code> 来代替。</li>
+<li><strong>端口号</strong>是由两个字节表示的整数，其范围是 0～65535。端口号用来给设备中的进程做唯一的标识。0～1023 范围内的端口号用于一些知名的网络服务与应用，普通应用程序需要使用 1024 以上的端口号。如果一个端口号被另一个服务或应用所占用，那么当前程序将会启动失败。</li>
+<li>利用<em>协议+IP 地址+端口号</em>这样的三元组合，就可以表示网络中的某个进程，进程间的通信可以借助这个标识进行。</li>
+</ul>
+<hr>
+<h2 id="✅-二-TCP-通信程序"><a href="#✅-二-TCP-通信程序" class="headerlink" title="✅ [二] TCP 通信程序"></a>✅ [二] TCP 通信程序</h2><h3 id="1-TCP-通信概述"><a href="#1-TCP-通信概述" class="headerlink" title="1. TCP 通信概述"></a>1. TCP 通信概述</h3><ul>
+<li>TCP 协议能实现两台计算机之间的数据交互，通信两端分为客户端 Client 与服务器端 Server。服务器端程序应默认为启动状态，等待客户端连接，而不能主动连接客户端；客户端连接服务器端成功后，二者方可通信。</li>
+<li>Java 中提供了两个类用于实现 TCP 通信程序：<code>Socket</code> 与 <code>ServerSocket</code>。</li>
+</ul>
+<h3 id="2-Socket-类"><a href="#2-Socket-类" class="headerlink" title="2. Socket 类"></a>2. Socket 类</h3><ul>
+<li><strong><em><code>java.net.Socket</code></em></strong> 类表示<strong>客户端套接字</strong>。套接字（Socket）指的是两台设备之间通讯的端点。<code>Socket</code> 对象能向服务器端发出连接请求，待请求响应后，连接建立成功，开始通信。</li>
+<li><code>Socket</code> 的构造方法是 <code>public Socket(String host, int port)</code>，能够创建套接字对象并将其主动连接到指定主机 <code>host</code> 上的指定端口号 <code>port</code>。如果 <code>host</code> 是 <code>null</code>，那么指定地址为<em>回送地址</em>[^4]。</li>
+<li><code>Socket</code> 类的常用成员方法有：<ul>
+<li><code>public InputStream getInputStream()</code>：生成当前套接字的输入流；将生成的输入流的所有操作（包括关闭）也同步到与当前套接字关联的通道。</li>
+<li><code>public OutputStream getOutputStream()</code>：生成当前套接字的输出流；将生成的输出流的所有操作（包括关闭）也同步到与当前套接字关联的通道。</li>
+<li><code>public void close()</code>：关闭套接字；关闭与套接字关联的流。</li>
+<li><code>public void shutdownOutput()</code>：禁用当前套接字的输出流；在此之前刷新输出流的缓冲区。</li>
+</ul>
+</li>
+</ul>
+<p>[^4]: 回送地址（<code>127.x.x.x</code>）指本机回送地址（Loopback Address），主要用于网络软件测试以及本地机进程间通信，无论什么程序，一旦指定向回送地址发送数据，那么就立即返回而不进行任何网络传输。</p>
+<h3 id="3-ServerSocket-类"><a href="#3-ServerSocket-类" class="headerlink" title="3. ServerSocket 类"></a>3. ServerSocket 类</h3><ul>
+<li><strong><em><code>java.net.ServerSocket</code></em></strong> 类表示<strong>服务器套接字</strong>。创建一个 <code>ServerSocket</code> 对象相当于开启一个服务，它需要等待网络中客户端对象的连接。</li>
+<li><code>ServerSocket</code> 的构造方法是 <code>public ServerSocket(int port)</code>，能够创建服务器套接字对象并将其绑定至指定端口号 <code>port</code> 上。</li>
+<li><code>ServerSocket</code> 的常用成员方法是 <code>public Socket accept()</code>，能够侦听并接受连接，返回一个新的 <code>Socket</code> 对象用于与客户端实现通信。该方法默认阻塞，直至建立连接。</li>
+</ul>
+<h3 id="4-简单的-TCP-网络程序"><a href="#4-简单的-TCP-网络程序" class="headerlink" title="4. 简单的 TCP 网络程序"></a>4. 简单的 TCP 网络程序</h3><ul>
+<li>TCP 通信分析的步骤大致如下：<ol>
+<li><em>服务端</em>启动，创建 <code>ServerSocket</code> 对象，等待连接；</li>
+<li><em>客户端</em>启动，创建 <code>Socket</code> 对象 <code>s1</code>，请求连接；</li>
+<li><em>服务端</em>接收连接，调用 <code>accept</code> 方法，得到新的 <code>Socket</code> 对象 <code>s2</code>；</li>
+<li><em>客户端</em>创建与 <code>s1</code> 关联的 <code>OutputStream</code> 流，向服务端写出数据；</li>
+<li><em>服务端</em>创建与 <code>s2</code> 关联的 <code>InputStream</code> 流，读取客户端发送的数据；</li>
+<li><em>服务端</em>创建与 <code>s2</code> 关联的 <code>OutputStream</code> 流，向客户端回写数据；</li>
+<li><em>客户端</em>创建与 <code>s1</code> 关联的 <code>InputStream</code> 流，读取服务端回写的数据；</li>
+<li><em>客户端</em>释放资源，断开连接。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="✅-三-网络编程综合案例"><a href="#✅-三-网络编程综合案例" class="headerlink" title="✅ [三] 网络编程综合案例"></a>✅ [三] 网络编程综合案例</h2><h3 id="1-文件上传案例"><a href="#1-文件上传案例" class="headerlink" title="1. 文件上传案例"></a>1. 文件上传案例</h3><ul>
+<li>下面是演示一个文件上传案例的代码：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class FileUploadServer{
+	public static void main(String[] args) throws IOException{
+		long first = System.currentTimeMillis();
+
+		ServerSocket serverSocket = new ServerSocket(6666);
+		System.out.println("服务器端：启动。总用时：" + (System.currentTimeMillis() - first) + "ms.");
+
+		while(true){
+			Socket newSocket = serverSocket.accept();
+			System.out.println("服务器端：已连接。总用时：" + (System.currentTimeMillis() - first) + "ms.");
+			new Thread(()-&gt;{
+				try{
+					BufferedInputStream in = new BufferedInputStream(newSocket.getInputStream());
+					/****** in：来自客户端，读入待上传文件 ******/
+					FileOutputStream fOut = new FileOutputStream("forTCP\\dest.jpg");
+					BufferedOutputStream out = new BufferedOutputStream(fOut);
+					/****** out：前往硬盘，写出上传文件 ******/
+
+					byte[] bytes = new byte[8192];
+					int read;
+					while((read = in.read(bytes)) != -1){
+						out.write(bytes, 0, read);
+					}
+					System.out.println("服务器端：上传成功。总用时：" + (System.currentTimeMillis() - first) + "ms.");
+
+					OutputStream back = newSocket.getOutputStream();
+					/****** back：前往客户端，写出回写信息 ******/
+
+					back.write(("服务器端：上传成功。总用时：" + (System.currentTimeMillis() - first) + "ms.").getBytes());
+
+					back.close();
+					out.close();
+					newSocket.close();
+					System.out.println("服务器端：连接断开。总用时：" + (System.currentTimeMillis() - first) + "ms.");
+				}catch(IOException e){
+					e.printStackTrace();
+				}
+			}).start();
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>第 8 行，<code>while(true)</code> 使得服务器在连接断开后不停止工作，而一直保持侦听状态。</p>
+<p>第 9~11 行，如果不创建线程对象，则会导致服务器端同时最多只能处理一个上传请求，而按照上述写法，每当 <code>accept</code> 方法成功返回一个 <code>Socket</code> 对象，就可以创建一个新线程，可以同时满足多个上传的需求。</p>
+<p>第 11~38 行，运用 Lambda 表达式生成 <code>Runnable</code> 对象，作为参数传入 <code>Thread</code> 的构造函数。</p>
+<p>第 15 行，如果实际情况下要上传很多次文件，就不应该使用固定的文件名（否则先上传的文件会被覆盖），可以考虑用 <code>System.currentMillis</code> 等方法使得每次上传都能使用一个独特的文件名。</p>
+</blockquote>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class FileUploadClient{
+	public static void main(String[] args) throws IOException{
+		long first = System.currentTimeMillis();
+		Socket socket = new Socket("localhost", 6666);
+		System.out.println("客户端：启动，请求连接。总用时：" + (System.currentTimeMillis() - first) + "ms.");
+
+		BufferedInputStream in = new BufferedInputStream(new FileInputStream("forTCP\\src.jpg"));
+		/****** in：来自硬盘，读入待上传文件 ******/
+		BufferedOutputStream out = new BufferedOutputStream(socket.getOutputStream());
+		/****** out：前往服务器端，写出待上传文件 ******/
+
+		byte[] bytes = new byte[8192];
+		int read;
+		while((read = in.read(bytes)) != -1){
+			out.write(bytes, 0, read);
+		}
+		socket.shutdownOutput();
+
+		byte[] back = new byte[32];
+		InputStream getBack = socket.getInputStream();
+		/****** getBack：来自服务器端，接收回写信息 ******/
+
+		getBack.read(back);
+		System.out.println(new String(back));
+
+		getBack.close();
+//		out.close();
+		in.close();
+		socket.close();
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>第 17 行，若不刷新并禁止输出流，那么服务器端将一直无法读入任何字节，导致程序阻塞。</p>
+<p>第 27 行，因为前面第 17 行已经禁止了输出流 <code>out</code>，所以不能将其重复关闭，否则报错。</p>
+</blockquote>
+<h3 id="2-模拟-B-S-服务器案例"><a href="#2-模拟-B-S-服务器案例" class="headerlink" title="2. 模拟 B/S 服务器案例"></a>2. 模拟 B/S 服务器案例</h3><ul>
+<li>下面是一个演示 B/S 服务器工作的案例的代码：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class BSServer{
+	public static void main(String[] args) throws IOException{
+		ServerSocket serverSocket = new ServerSocket(8888);
+
+		while(true){
+			Socket newSocket = serverSocket.accept();
+
+//		    byte[] bytes = new byte[1024];
+//		    int read = newSocket.getInputStream().read(bytes);
+//		    System.out.println(new String(bytes, 0, read));
+
+			new Thread(() -&gt; {
+				try{
+					BufferedReader reader = new BufferedReader(new InputStreamReader(newSocket.getInputStream()));
+					String line = reader.readLine();
+					String[] requests = line.split(" ");
+
+					FileInputStream in = new FileInputStream(requests[1].substring(1));
+					OutputStream out = newSocket.getOutputStream();
+
+					out.write("HTTP/1.1 200 OK \r\n".getBytes());
+					out.write("Content-Type:text/html\r\n".getBytes());
+					out.write("\r\n".getBytes());
+
+					byte[] bytes = new byte[1024];
+					int read;
+					while((read = in.read(bytes)) != -1){
+						out.write(bytes, 0, read);
+					}
+
+					out.close();
+					in.close();
+
+					reader.close();
+					newSocket.close();
+				}catch(IOException e){
+					e.printStackTrace();
+				}
+			}).start();
+		}
+//		serverSocket.close();
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>第 3 行，端口号假设是数字 <code>dddd</code>，那么浏览器的访问地址应该是 <code>http://127.0.0.1:dddd/模块名/web/Sspai.html</code>。</p>
+<p>第 8~10 行，用一个输入流，可以收到浏览器发送的请求信息并打印查看。需要有一个输出流向浏览器发送 <code>html</code> 文件才能访问网页。</p>
+<p>第 12~13 行，Lambda 表达式可以简洁创建 <code>Runnable</code> 对象，而 <code>new Thread</code> 新建线程则是为了加载网页中的图片等信息，<code>try-catch</code> 用于捕获异常。</p>
+<p>第 14~18 行，通过读浏览器的请求信息第一行 <code>GET /Module_001/web/Sspai.html HTTP/1.1</code>，可以提取出相应 <code>html</code> 文件的路径。</p>
+<p>第 21~23 行，用输出流默认写出这三行 <em>HTTP 协议响应头</em>，要了解原理，可以去学习更多 HTTP 的有关知识。</p>
+<p>第 41 行，无法执行到的代码行，故注释。</p>
+</blockquote>
+<hr>
+<hr>
+<h1 id="Day12：函数式接口"><a href="#Day12：函数式接口" class="headerlink" title="Day12：函数式接口"></a>Day12：函数式接口</h1><hr>
+<h2 id="✅-一-函数式接口"><a href="#✅-一-函数式接口" class="headerlink" title="✅ [一] 函数式接口"></a>✅ [一] 函数式接口</h2><h3 id="1-函数式接口概述"><a href="#1-函数式接口概述" class="headerlink" title="1. 函数式接口概述"></a>1. 函数式接口概述</h3><ul>
+<li>在之前 Lambda 表达式部分中提到过，<strong>函数式接口</strong>是指<strong>有且仅有一个抽象方法</strong>的接口。</li>
+<li>定义一个函数式接口，只需确保接口中仅有一个抽象方法即可：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">修饰符 interface 接口名称{
+	public abstract 返回值类型 方法名(参数列表);
+	//可以加入其他非抽象方法内容
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>语法糖是指使用方便但原理不变的语法，如遍历集合中时的 <code>for-each</code>。而对于匿名内部类来说，Lambda 表达式也可以看作语法糖，尽管二者在原理上不同。<br>实际上，接口中的方法默认就有 <code>public abstract</code> 修饰符，所以可以选择省略不写。</p>
+</blockquote>
+<h3 id="2-FunctionalInterface-注解"><a href="#2-FunctionalInterface-注解" class="headerlink" title="2. @FunctionalInterface 注解"></a>2. @FunctionalInterface 注解</h3><ul>
+<li>与 <code>@Override</code> 一样，从 Java8 开始出现的 <strong><em><code>@FunctionalInterface</code></em></strong> 也是一个注解，它的作用是说明接下来定义的接口是一个函数式接口，若带有该注解的接口没有或有不止一个抽象方法，编译器在编译阶段就会报错。Java8？</li>
+<li>注解可写可不写，但建议在定义函数式接口时都写上 <code>@FunctionalInterface</code>。</li>
+</ul>
+<hr>
+<h2 id="✅-二-函数式编程"><a href="#✅-二-函数式编程" class="headerlink" title="✅ [二] 函数式编程"></a>✅ [二] 函数式编程</h2><h3 id="1-Lambda-表达式的延迟执行"><a href="#1-Lambda-表达式的延迟执行" class="headerlink" title="1. Lambda 表达式的延迟执行"></a>1. Lambda 表达式的延迟执行</h3><ul>
+<li>有些代码语句只在特殊条件下需要执行，如果每次都让这种语句先执行，就会造成性能浪费。下面是有关日志消息打印输出的一个性能浪费案例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class BadLogger{
+	public static void main(String[] args){
+		String messageA = "Hello";
+		String messageB = "World";
+		showLog(1, messageA + messageB);
+	}
+
+	private static void showLog(int level, String message){
+		if(level == 3)
+			System.out.println(message);
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>在这里，无论日志的等级是否符合要求，都必定进行字符串拼接的操作，浪费了时间与内存。Lambda 表达式可以<strong>延迟执行</strong>，避免了这一问题：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">@FunctionalInterface
+public interface MessageBuider{
+	String build();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		String messageA = "Hello";
+		String messageB = "World";
+
+		showLog(1, () -&gt; {
+			System.out.println("字符串拼接成功。");
+			return messageA + messageB;
+		});
+	}
+
+	private static void showLog(int level, MessageBuider buider){
+		if(level == 3)
+			System.out.println(buider.build());
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-Lambda-式的参数和返回值"><a href="#2-Lambda-式的参数和返回值" class="headerlink" title="2. Lambda 式的参数和返回值"></a>2. Lambda 式的参数和返回值</h3><ul>
+<li>Lambda 表达式可以作为方法的参数与返回值，只要所需的参数为相应的函数式接口的实例，即可直接使用 Lambda 表达式，可以结合下面一章的示例代码理解，此处不过多介绍。</li>
+</ul>
+<hr>
+<h2 id="✅-三-常用函数式接口"><a href="#✅-三-常用函数式接口" class="headerlink" title="✅ [三] 常用函数式接口"></a>✅ [三] 常用函数式接口</h2><h3 id="1-Supplier-接口"><a href="#1-Supplier-接口" class="headerlink" title="1. Supplier 接口"></a>1. Supplier 接口</h3><ul>
+<li><strong><em><code>java.util.function.Supplier&lt;T&gt;</code></em></strong> 接口仅含一个方法：**<em><code>T get()</code>**</em>，用来提供一个指定泛型类型的对象。接口对象的任务是<strong>规定要给出怎样的一个对象</strong>。</li>
+</ul>
+<h3 id="2-Consumer-接口"><a href="#2-Consumer-接口" class="headerlink" title="2. Consumer 接口"></a>2. Consumer 接口</h3><ul>
+<li><strong><em><code>java.util.function.Consumer&lt;T&gt;</code></em></strong> 接口的抽象方法：**<em><code>void accept(T t)</code>**</em>，用来消费一个指定泛型类型的对象。接口对象的任务是<strong>规定如何去消费一个对象</strong>。</li>
+<li><code>Consumer&lt;T&gt;</code> 接口中还有一个默认方法：<code>Consumer&lt;T&gt; andThen(Consumer&lt;? super T&gt; after)</code>。如果让一个 <code>Consumer</code> Lambda 对象做调用者，以其他 Lambda 对象做参数，就可以用链式调用语句，一次性调用多个 <code>Consumer</code> Lambda 对象的 <code>accept</code> 方法。多个接口对象需要一次性解决<strong>传入一个对象，如果对其消费多次，每次应该怎么消费</strong>的问题。</li>
+</ul>
+<h3 id="3-Predicate-接口"><a href="#3-Predicate-接口" class="headerlink" title="3. Predicate 接口"></a>3. Predicate 接口</h3><ul>
+<li><strong><em><code>java.util.function.Predicate&lt;T&gt;</code></em></strong> 接口的抽象方法：**<em><code>boolean test(T t)</code>**</em>，用来判断一个指定泛型类型的对象是否符合某条件。接口对象的任务是<strong>定义某个标准，用来看一个对象是否达标</strong>。</li>
+<li><code>Predicate&lt;T&gt;</code> 接口中还有三个默认方法：<code>boolean and或or(Predicate&lt;? super T&gt; other)</code> 以及 <code>boolean negate()</code>，它们分别返回 <code>Predicate</code> Lambda 对象 <code>test</code> 方法返回值的与、或、非的结果。因此，多个接口对象的任务是<strong>定义一些标准，用来看一个对象是否同时全部达标/是否达到至少其一</strong>。</li>
+</ul>
+<h3 id="4-Function-接口"><a href="#4-Function-接口" class="headerlink" title="4. Function 接口"></a>4. Function 接口</h3><ul>
+<li><strong><em><code>java.util.function.Function&lt;T,R&gt;</code></em></strong> 接口的抽象方法：**<em><code>R apply(T t)</code>**</em>，它接收一个 <code>T</code> 类型的对象，返回一个 <code>R</code> 类型的对象。接口对象的任务是<strong>定义一个关于对象的函数</strong>。</li>
+<li><code>Function&lt;T,R&gt;</code> 接口中也有默认方法 <code>andThen</code>，与 <code>Consumer</code> 类似，它的返回值可以继续调用 <code>andThen</code>。这样能够实现多步操作，其中第一步需要一个对象来启动，从第二步开始，每步的参数都来自上一步的返回值，最终返回一个对象。多个接口对象需要共同<strong>定义一个关于对象的复合函数</strong>。</li>
+</ul>
+<h3 id="5-实际运用案例"><a href="#5-实际运用案例" class="headerlink" title="5. 实际运用案例"></a>5. 实际运用案例</h3><ul>
+<li>关于上述四种接口，下面是运用的演示代码：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class TestClass{
+	public static void main(String[] args){
+		showLuck(10);
+		//Supplier&lt;T&gt;
+		showUpperAndLower("Hello, Mikey!");
+		//Consumer&lt;T&gt;
+		showMultiple(8, 3, 4);
+		//Predicate&lt;T&gt;
+		showTotalCount("Attitude");
+		//Function&lt;T,R&gt;
+	}
+
+	/****** 规定要给出怎样的一个对象 ******/
+	private static void showLuck(int bound){
+		System.out.println("Lucky level for today: " + (doSupplier(() -&gt; new Random().nextInt(bound) + 1)));
+	}
+	private static int doSupplier(Supplier&lt;Integer&gt; supplier){
+		return supplier.get();
+	}
+
+	/****** 规定如何去（多次）消费一个对象 ******/
+	private static void showUpperAndLower(String str){
+		doConsumer(s -&gt; System.out.println("Origin: " + s),
+				s -&gt; System.out.println("Upper: " + s.toUpperCase()),
+				s -&gt; System.out.println("Lower: " + s.toLowerCase()), str);
+	}
+	private static void doConsumer(Consumer&lt;String&gt; first, Consumer&lt;String&gt; second, Consumer&lt;String&gt; third, String s){
+		first.andThen(second).andThen(third).accept(s);
+	}
+
+	/****** 定义一个（或一些）标准，来看一个对象是否达标（或全部达标或至少达到其一） ******/
+	private static void showMultiple(int n, int a, int b){
+		if(mulAndNot(n, a, b)){
+			System.out.println(n + " is a multiple of " + a + " but not a multiple of " + b + ".");
+		}
+		if(mulAndNot(n, b, a)){
+			System.out.println(n + " is a multiple of " + b + " but not a multiple of " + a + ".");
+		}
+	}
+	private static boolean mulAndNot(int n, int a, int b){
+		return doPredicate(i -&gt; i % a == 0, i -&gt; i % b != 0, n);
+	}
+	private static boolean doPredicate(Predicate&lt;Integer&gt; first, Predicate&lt;Integer&gt; second, int n){
+		return first.and(second).test(n);
+	}
+
+	/****** 定义一个关于对象的（复合）函数 ******/
+	private static void showTotalCount(String str){
+		System.out.println("The total count of the word '" + str + "' is " + getTotalCount(str) + ".");
+	}
+	private static int getTotalCount(String str){
+		return doFunction(s -&gt; {
+			ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+			for(int i = 0; i &lt; s.length(); i++){
+				char c = s.charAt(i);
+				if(!Character.isLetter(c)){
+					System.out.println("Invalid Input.");
+					return null;
+				}
+				list.add(i, (c&gt;='a' ? c-'a' : c-'A') + 1);
+			}
+			return list;
+		}, list -&gt; {
+			int ret = 0;
+			for(Integer integer : list){
+				ret += integer;
+			}
+			return ret;
+		}, str);
+	}
+	private static Integer doFunction(Function&lt;String,ArrayList&lt;Integer&gt;&gt; first,
+									  Function&lt;ArrayList&lt;Integer&gt;,Integer&gt; second, String s){
+		return first.andThen(second).apply(s);
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<hr>
+<h1 id="Day13：Stream-流、方法引用"><a href="#Day13：Stream-流、方法引用" class="headerlink" title="Day13：Stream 流、方法引用"></a>Day13：Stream 流、方法引用</h1><hr>
+<h2 id="✅-一-Stream-流"><a href="#✅-一-Stream-流" class="headerlink" title="✅ [一] Stream 流"></a>✅ [一] Stream 流</h2><h3 id="1-流式思想概述"><a href="#1-流式思想概述" class="headerlink" title="1. 流式思想概述"></a>1. 流式思想概述</h3><ul>
+<li>几乎所有的集合（如 <code>Collection</code> 和 <code>Map</code> 等）都支持直接或者间接的<strong>遍历</strong>操作。而很多时候，我们遍历是为了对集合中的元素进行<strong>筛选</strong>，也就是说，我们需要的是遍历的结果，但并不关心过程。而之前所学的函数式编程思想则很好地契合了这一需求。</li>
+<li>比起一次次确定每个元素的筛选结果（遍历），有一个新的思路是，把集合中的所有对象进行多步<strong>过滤</strong>，过滤完成后，留下的自然就是我们所需要的结果。</li>
+<li>Java8 开始的 <code>Stream</code> 流则可以帮助我们迅速地完成过滤操作。**<em><code>Stream</code></em> 流**是一个来自数据源的元素队列，并且支持聚合操作：<ul>
+<li><strong>元素</strong>是指特定类型的对象，它们形成一个<strong>队列</strong>。但 <code>Stream</code> 并不负责存储这些元素，只负责对它们进行计算。</li>
+<li><strong>数据源</strong>是指流的来源，即集合、数组、I/O channel、generator（以后会接触）等。</li>
+<li><strong>聚合操作</strong>是指对大量的元素进行统一的、一次性的操作。</li>
+</ul>
+</li>
+<li><code>Stream</code> 的操作相比于 <code>Collection</code>，还有以下两个重要特征：<ul>
+<li><strong>Pipelining</strong>：所有中间操作都会返回一个 <code>Stream</code>，这样可以让多个操作串联成一个管道。这样的优势在于提高效率，比如延迟执行、短路等。</li>
+<li><strong>内部迭代</strong>：集合的遍历都是通过迭代器或是增强 <code>for</code> 的方式，在集合的外部进行迭代，这是外部迭代。<code>Stream</code> 提供了内部迭代的方式，它可以直接调用遍历方法。</li>
+</ul>
+</li>
+<li>使用一个 <code>Stream</code> 通常包括三个步骤：获取数据源→数据转换→获取结果。每一步转换的过程都不会改变原有的 <code>Stream</code> 而返回一个新的 <code>Stream</code>，这样多个操作串联成管道的形式，就体现了<strong>流式思想</strong>。</li>
+</ul>
+<h3 id="2-流的获取"><a href="#2-流的获取" class="headerlink" title="2. 流的获取"></a>2. 流的获取</h3><ul>
+<li><strong><em><code>java.util.stream.Stream&lt;T&gt;</code></em></strong> 是 Java8 新加入的最常用的流接口，它并不是一个函数式接口。</li>
+<li>如果要获取一个 <code>Stream</code>，有两种常用方式：<ul>
+<li>任何的 <code>Collection</code> 集合实例都可以通过 <strong><em><code>default Stream&lt;E&gt; stream()</code></em></strong> 方法获取流。</li>
+<li><code>Stream&lt;T&gt;</code> 接口的静态方法 <strong><em><code>static &lt;T&gt; Stream&lt;T&gt; of(T... values)</code></em></strong> 可以获取数组对应的流。</li>
+</ul>
+</li>
+<li>下面是获取 <code>Stream</code> 的简单演示代码：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class DemoStreamMainClass{
+	public static void main(String[] args){
+		List&lt;Integer&gt; list= new ArrayList&lt;&gt;();
+		Collections.addAll(list, 1, 3, 6);
+		Map&lt;String,String&gt; map = new HashMap&lt;&gt;();
+		map.put("aaa", "bbb");
+
+		Stream&lt;Integer&gt; listStream = list.stream();
+		Stream&lt;String&gt; keyStream = map.keySet().stream();
+		Stream&lt;Map.Entry&lt;String,String&gt;&gt; entryStream = map.entrySet().stream();
+
+		Character[] array = {'J', 'a', 'v', 'a'};
+		Stream&lt;Character&gt; charStream = Stream.of(array);
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><code>Map</code> 不属于 <code>Collection</code>，但它的键/值/键值对集合可以生成 <code>Stream</code>。</p>
+</blockquote>
+<h3 id="3-常用方法-2"><a href="#3-常用方法-2" class="headerlink" title="3. 常用方法"></a>3. 常用方法</h3><ul>
+<li><code>Stream</code> 的方法很丰富，它们分为两类：<ul>
+<li><strong>延迟方法</strong>是指返回值类型依然为 <code>Stream</code> 的方法，可以方便地进行链式调用。延迟方法的参数通常是函数式接口的子类对象。</li>
+<li><strong>终结方法</strong>的返回值不再是 <code>Stream</code> 类型，它通常用来返回最终结果。</li>
+</ul>
+</li>
+<li>下面是具体的方法：<ul>
+<li><strong><em><code>Stream&lt;T&gt; filter(Predicate&lt;? super T&gt; predicate)</code></em></strong>：该方法接收一个 <code>Predicate</code> 谓词接口，可以返回经过筛选的 <code>Stream</code>。</li>
+<li><strong><em><code>&lt;R&gt; Stream&lt;R&gt; map(Function&lt;? super T, ? extends R&gt; mapper)</code></em></strong>：该方法接收一个 <code>Function</code> 函数接口，可以返回经过映射的 <code>Stream</code>。</li>
+<li><strong><em><code>long count()</code></em></strong>：返回流中的元素个数，相当于集合中的 <code>size</code> 方法。</li>
+<li><strong><em><code>Stream&lt;T&gt; limit(long maxSize)</code></em></strong>：对流进行截取，保留前 <code>maxSize</code> 个元素。</li>
+<li><strong><em><code>Stream&lt;T&gt; skip(long n)</code></em></strong>：对流进行截取，保留后 <code>n</code> 个元素。</li>
+<li><strong><em><code>static &lt;T&gt; Stream&lt;T&gt; concat(Stream&lt;? extends T&gt; a, Stream&lt;? extends T&gt; b)</code></em></strong>：静态方法，将两个 <code>Stream</code> 合并为一个。</li>
+<li><strong><em><code>void forEach(Consumer&lt;? super T&gt; action)</code></em></strong>：终结方法，接收一个 <code>Comsumer</code> 消费者接口，可以对队列中的每个元素进行特定的操作。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>正因为有些延迟方法可以使用 Lambda 表达式作为接口对象，所以在终结方法被调用前，它们都不会启动，这是名称中“延迟”的由来，这样的特性能够使整个程序的执行结构得到优化。</p>
+</blockquote>
+<h3 id="4-Stream-方式运用案例"><a href="#4-Stream-方式运用案例" class="headerlink" title="4. Stream 方式运用案例"></a>4. Stream 方式运用案例</h3><ul>
+<li>下面是使用 <code>Stream</code> 处理问题的代码示例：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class Test{
+	private String name;
+
+	//构造方法、getter 和 setter 省略
+
+	@Override
+	public String toString(){
+		return "Test{" +
+				       "name='" + name + '\'' +
+				       '}';
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class DemoStreamMainClass{
+	public static void main(String[] args){
+		List&lt;String&gt; list1 = new ArrayList&lt;&gt;(Arrays.asList("a1", "a2", "a3", "a5", "a8", "b1", "b2"));
+		List&lt;String&gt; list2 = new ArrayList&lt;&gt;(Arrays.asList("aa", "b", "bb", "cc", "ccc", "dd", "ee", "e"));
+
+		Stream.concat(
+				list1.stream().filter(s -&gt; (s.charAt(0) == 'a')).limit(3),
+				list2.stream().filter(s -&gt; s.length() == 2).skip(3)
+		).map(Test::new).forEach(System.out::println);
+	}
+}
+/*
+运行结果：
+Test{name='a1'}
+Test{name='a2'}
+Test{name='a3'}
+Test{name='dd'}
+Test{name='ee'}
+*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="✅-二-方法引用"><a href="#✅-二-方法引用" class="headerlink" title="✅ [二] 方法引用"></a>✅ [二] 方法引用</h2><h3 id="1-冗余的-Lambda-场景"><a href="#1-冗余的-Lambda-场景" class="headerlink" title="1. 冗余的 Lambda 场景"></a>1. 冗余的 Lambda 场景</h3><ul>
+<li>在上面演示 <code>Stream</code> 方法使用的例子中，我们用到了 <code>Test::new</code> 和 <code>System.out::println</code> 作为终结方法的参数，实际上若用 Lambda 表达式，它们会是 <code>s -&gt; new Test(s)</code> 和 <code>test -&gt; System.out.println(test)</code>，反而语法上会冗余。</li>
+</ul>
+<h3 id="2-方法引用概述"><a href="#2-方法引用概述" class="headerlink" title="2. 方法引用概述"></a>2. 方法引用概述</h3><ul>
+<li><strong>方法引用</strong>就是指对一个方法的引用，它的功能是能够直接<strong>替代一个 Lambda 表达式</strong>，只要想使用的方法的定义已经存在且可被访问。</li>
+<li><strong><code>::</code></strong> 是得到方法引用专用的运算符，称为<strong>引用运算符</strong>。</li>
+<li>注意传递方法时类型的一致。如果方法引用与所需的 Lambda 表达式类型不符，则会抛出异常。</li>
+</ul>
+<h3 id="3-三种方式引用成员方法"><a href="#3-三种方式引用成员方法" class="headerlink" title="3. 三种方式引用成员方法"></a>3. 三种方式引用成员方法</h3><ul>
+<li>想要使用任何可以访问且无歧义的成员方法，直接写成 <strong><em><code>类名::方法名</code></em></strong> 即可。</li>
+<li>如果一个对象想要使用本类的成员方法，可以写成 <strong><em><code>this::方法名</code></em></strong>。</li>
+<li>如果一个对象想要使用父类成员方法的引用，可以写成 <strong><em><code>super::方法名</code></em></strong>。</li>
+</ul>
+<h3 id="4-通过类名引用静态方法"><a href="#4-通过类名引用静态方法" class="headerlink" title="4. 通过类名引用静态方法"></a>4. 通过类名引用静态方法</h3><ul>
+<li>通过 <strong><em><code>类名::方法名</code></em></strong> 可以使用<strong>静态方法</strong>的引用，这与普通方法相同。</li>
+</ul>
+<h3 id="5-引用类或数组的构造方法"><a href="#5-引用类或数组的构造方法" class="headerlink" title="5. 引用类或数组的构造方法"></a>5. 引用类或数组的构造方法</h3><ul>
+<li>想要使用某个类的构造方法，直接写成 <strong><em><code>类名::new</code></em></strong> 即可。</li>
+<li>想要使用一个数组的构造器，直接写成 <strong><em><code>数据类型[]::new</code></em></strong> 即可。</li>
+</ul>
+<hr>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Erron Liu</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://erronzrz.github.io/2020/12/20/Advance/">https://erronzrz.github.io/2020/12/20/Advance/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Erron Liu</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/JavaSE/">
+                                    <span class="chip bg-color">JavaSE</span>
+                                </a>
+                            
+                                <a href="/tags/College/">
+                                    <span class="chip bg-color">College</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/12/20/Advance/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JavaSE 基础笔记">
+                        
+                        <span class="card-title">JavaSE 基础笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            这是 2020 学年第一学期「面向对象程序设计」课程的笔记，里面是 JavaSE 的知识，纯手打不免有错漏之处，仅供参考啦。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Advance/" class="post-category">
+                                    Advance
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaSE/">
+                        <span class="chip bg-color">JavaSE</span>
+                    </a>
+                    
+                    <a href="/tags/College/">
+                        <span class="chip bg-color">College</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/12/20/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Erron Liu
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2020</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Erron Liu</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/ErronZrz" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1347092678@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1347092678" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1347092678" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

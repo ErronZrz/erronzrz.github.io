@@ -2,19 +2,46 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Erron</title>
   
-  
+  <subtitle>还没想好这个标题</subtitle>
   <link href="https://erronzrz.github.io/atom.xml" rel="self"/>
   
   <link href="https://erronzrz.github.io/"/>
-  <updated>2020-12-20T01:02:59.490Z</updated>
+  <updated>2020-12-20T02:22:55.832Z</updated>
   <id>https://erronzrz.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Erron Liu</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaSE 基础笔记</title>
+    <link href="https://erronzrz.github.io/2020/12/20/Advance/"/>
+    <id>https://erronzrz.github.io/2020/12/20/Advance/</id>
+    <published>2020-12-20T02:20:00.000Z</published>
+    <updated>2020-12-20T02:22:55.832Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Day01：Object-类、常用-API&quot;&gt;&lt;a href=&quot;#Day01：Object-类、常用-API&quot; class=&quot;headerlink&quot; title=&quot;Day01：Object 类、常用 API&quot;&gt;&lt;/a&gt;Day01：Object 类、常用</summary>
+        
+      
+    
+    
+    
+    <category term="Advance" scheme="https://erronzrz.github.io/categories/Advance/"/>
+    
+    
+    <category term="JavaSE" scheme="https://erronzrz.github.io/tags/JavaSE/"/>
+    
+    <category term="College" scheme="https://erronzrz.github.io/tags/College/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
